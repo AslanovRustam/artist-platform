@@ -1,7 +1,7 @@
 import { useState } from "react";
 import clsx from "clsx";
 import { LANGUEGES } from "../../utils/constants";
-import styles from "./LangSwitcher.module.css";
+import styles from "./langSwitcher.module.css";
 
 type Props = {};
 
