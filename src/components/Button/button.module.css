@@ -48,6 +48,7 @@
 
 .icon {
   transition: var(--transition);
+  color: var(--Orange);
 }
 
 .buttonIcon:hover .icon,

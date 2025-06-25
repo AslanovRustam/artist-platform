@@ -27,7 +27,6 @@ export default function Modal({
   }, [showModal]);
 
   if (!modalRoot) return null;
-  console.log("showModal", showModal);
 
   return createPortal(
     <div

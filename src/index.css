@@ -111,6 +111,9 @@ button {
   border-radius: 10px;
   transition: all 2s ease-in-out;
 }
+.react-responsive-modal-modal {
+  max-width: fit-content;
+}
 
 @media (orientation: portrait) {
 }

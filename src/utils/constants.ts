@@ -2,6 +2,9 @@ import artist1 from "../assets/images/artists/artist1.png";
 import artist2 from "../assets/images/artists/artist2.png";
 import artist3 from "../assets/images/artists/artist3.png";
 import artist4 from "../assets/images/artists/artist4.png";
+import User from "../assets/icons/user.svg?react";
+import Link from "../assets/icons/link.svg?react";
+import Epk from "../assets/icons/epk.svg?react";
 
 export const ROUTES = {
   home: "/",
@@ -59,4 +62,15 @@ export const BOOKING = [
     title: "ENJOY!",
     description: "Relax and enjoy the show",
   },
+];
+
+export const ARTIST_REGISTRATION_STEPS = [
+  {
+    id: 0,
+    Icon: User,
+    title: "Basic Info",
+    description: "Tell us about yourself",
+  },
+  { id: 1, Icon: Link, title: "Links", description: "Get in Touch" },
+  { id: 2, Icon: Epk, title: "EPK", description: "Upload your press kit" },
 ];

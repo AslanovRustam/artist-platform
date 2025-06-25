@@ -13,6 +13,7 @@ type Props = {
   className?: string;
   classNameLabel?: string;
   classNameInput?: string;
+  rows?: number;
 };
 
 export default function Input({
@@ -26,6 +27,7 @@ export default function Input({
   className,
   classNameLabel,
   classNameInput,
+  rows = 2,
 }: Props) {
   const handleChange = (
     e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
@@ -51,6 +53,7 @@ export default function Input({
             onChange={handleChange}
             placeholder={placeholder}
             className={clsx(styles.input, classNameInput)}
+            rows={rows}
           />
         ) : (
           <input

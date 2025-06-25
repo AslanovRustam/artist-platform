@@ -1,12 +1,13 @@
 import { useState } from "react";
+import { Modal } from "react-responsive-modal";
 // Components
 import ButtonWithIcon from "../Button/ButtonWithIcon";
+import PopupBooking from "../Popups/PopupBooking";
 // Images
 import Triangle from "../../assets/icons/decorLeft.svg?react";
 // Styles
 import styles from "./bookinggreen.module.css";
-import Modal from "../Modal/Modal";
-import PopupBooking from "../Popups/PopupBooking";
+import "react-responsive-modal/styles.css";
 
 type Props = {};
 
@@ -16,6 +17,38 @@ function BookingGreen({}: Props) {
   const togglePopup = () => {
     setIsPopupOpen(!isPopupOpen);
   };
+
+  const closeIcon = (
+    <svg
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <g clipPath="url(#clip0_106_1043)">
+        <path
+          d="M18 6L6 18"
+          stroke="#6E7684"
+          strokeWidth="2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        />
+        <path
+          d="M6 6L18 18"
+          stroke="#6E7684"
+          strokeWidth="2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        />
+      </g>
+      <defs>
+        <clipPath id="clip0_106_1043">
+          <rect width="24" height="24" fill="white" />
+        </clipPath>
+      </defs>
+    </svg>
+  );
   return (
     <>
       <div className={styles.container}>
@@ -43,18 +76,19 @@ function BookingGreen({}: Props) {
         <Triangle className={styles.triangleSecond} />
         <div className={styles.decorStar} />
       </div>
+
       <Modal
+        open={isPopupOpen}
         onClose={togglePopup}
-        showModal={isPopupOpen}
-        className="bg-blur"
-        key="booking"
+        center
+        classNames={{
+          modal: styles.modalContainer,
+          overlay: styles.customOverlay,
+          closeIcon: styles.customCloseButton,
+        }}
+        closeIcon={closeIcon}
       >
-        <div
-          onClick={(e) => e.stopPropagation()}
-          className={styles.modalContent}
-        >
-          <PopupBooking onClose={togglePopup} />
-        </div>
+        <PopupBooking onClose={togglePopup} />
       </Modal>
     </>
   );

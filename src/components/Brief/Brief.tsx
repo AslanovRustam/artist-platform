@@ -41,7 +41,7 @@ export default function Brief({}: Props) {
     }));
   };
 
-  console.log("formData", formData);
+
 
   return (
     <div className={styles.container}>

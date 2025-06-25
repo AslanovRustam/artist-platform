@@ -1,0 +1,46 @@
+.container {
+  width: 100%;
+}
+
+.dropzone {
+  border: 2px dashed var(--Light-Grey);
+  padding: 24px;
+  text-align: center;
+  cursor: pointer;
+  border-radius: 8px;
+  background-color: var(--Grey-BG);
+  color: var(--White);
+  transition: border 0.2s;
+}
+
+.dropzone:hover {
+  border-color: var(--Yellow);
+}
+
+.fileInfo {
+  color: var(--White);
+  margin-top: 12px;
+}
+
+.error {
+  color: red;
+  margin-top: 8px;
+  font-size: 14px;
+}
+.icon {
+  width: 48px;
+  height: 48px;
+}
+.title {
+  color: var(--White);
+  text-align: center;
+  font-size: 24px;
+  line-height: 32px;
+  margin-bottom: 8px;
+}
+.subTitle {
+  color: var(--Light-Grey);
+  text-align: center;
+  font-size: 14px;
+  line-height: 20px;
+}

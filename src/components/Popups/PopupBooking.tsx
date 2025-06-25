@@ -10,7 +10,6 @@ import type { ICheckbox } from "../../types/types";
 import { BUDGET, LOCATIONS } from "../../utils/constants";
 // Images
 import Location from "../../assets/icons/location.svg?react";
-import Close from "../../assets/icons/close.svg?react";
 import Calendar from "../../assets/icons/calendar.svg?react";
 import Attendents from "../../assets/icons/attendents.svg?react";
 import Clock from "../../assets/icons/clock.svg?react";
@@ -55,7 +54,6 @@ function PopupBooking({ onClose }: Props) {
     console.log("formData", formData);
     onClose();
   };
-  console.log("formData", formData);
 
   return (
     <div className={styles.container}>
@@ -63,7 +61,7 @@ function PopupBooking({ onClose }: Props) {
       <p className={styles.subTitle}>
         Fill out the form below to request a booking.
       </p>
-      <Close className={styles.closeIcon} onClick={onClose} />
+      {/* <Close className={styles.closeIcon} onClick={onClose} /> */}
       <form className={styles.form} onSubmit={handleSubmit}>
         <CustomSelect
           label="Event Type"

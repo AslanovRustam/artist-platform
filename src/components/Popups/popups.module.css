@@ -55,12 +55,16 @@
   line-height: 20px !important;
 }
 .selectBooking,
-.selectBookingTextArea {
+.selectBookingTextArea,
+.inputArtist,
+.inputArtistTextArea {
   border-color: transparent !important;
   border-radius: 0 !important;
   font-size: 14px !important;
+  width: 100%;
 }
-.selectBookingTextArea {
+.selectBookingTextArea,
+.inputArtistTextArea {
   padding: 20px !important;
   max-width: unset !important;
   resize: none !important;
@@ -68,7 +72,167 @@
 .containerWidthTextArea {
   width: 100% !important;
 }
+/* PopupArtistRegistration */
+.stepsList {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8.5px;
+  margin-top: 12px;
+}
+.stepsItem {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.stepsItem:not(:last-child)::after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 40px;
+  height: 1px;
+  background-color: var(--Light-Grey);
+  top: 24px;
+  right: -54px;
+}
+.stepsItem:nth-child(2)::after {
+  right: -76px;
+}
+.iconContainer {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 12px;
+  border: 1px solid var(--Light-Grey);
+}
+.active {
+  background-color: var(--Yellow);
+}
 
+.iconSteps {
+  width: 24px;
+  height: 24px;
+}
+.stepTitle {
+  color: var(--White);
+  text-align: center;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 20px;
+  margin-bottom: 4px;
+}
+.stepDescription {
+  color: var(--Light-Grey);
+  text-align: center;
+  font-size: 14px;
+  line-height: 20px;
+}
+.stepName {
+  color: var(--White);
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 32px;
+}
+.stepContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  margin: 24px 0;
+}
+.inputArtist,
+.inputArtistTextArea {
+  padding: 10px 16px !important;
+}
+.buttonContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.button {
+  display: flex;
+  padding: 8px 24px 8px 20px;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+  border-radius: 999px;
+  border: 0.8px solid var(--Light-Grey);
+  color: var(--Light-Grey);
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 24px;
+  transition: var(--transition);
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    background-color: var(--Yellow);
+    color: var(--Grey-BG);
+  }
+}
+.button:hover .buttonPrevIcon,
+.button:focus .buttonPrevIcon,
+.button:hover .buttonNextIcon,
+.button:focus .buttonNextIcon {
+  color: var(--Orange);
+}
+.buttonPrevIcon,
+.buttonNextIcon {
+  transition: var(--transition);
+}
+.buttonPrevIcon {
+  rotate: 180deg;
+}
+.rightBtnContainer {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.trippleContainer {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.containerWidth33 {
+  width: 165px !important;
+}
+.terms {
+  color: var(--Light-Grey);
+  text-align: center;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.linkYellow {
+  color: var(--Yellow);
+}
+
+.fileListContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.fileListTitle {
+  color: var(--Yellow);
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 20px;
+}
+.fileList {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-left: 16px;
+}
+.item {
+  color: var(--White);
+  font-size: 14px;
+  line-height: 20px;
+  list-style: disc;
+}
 @media (orientation: portrait) {
   .container {
     height: 100% !important;
@@ -87,4 +251,36 @@
   .containerWidthTextArea {
     width: 100% !important;
   }
+  .container {
+    padding: 16px;
+    max-height: 90vh;
+    overflow-y: auto;
+  }
+  .stepsItem:not(:last-child)::after {
+    right: -14px;
+  }
+  .stepsItem:nth-child(2)::after {
+    right: -37px;
+  }
+  .trippleContainer {
+    flex-direction: column;
+  }
+  .containerWidth33 {
+    width: 100% !important;
+  }
+  .rightBtnContainer {
+    gap: 2px;
+  }
+}
+
+.container {
+  position: relative;
+  background: var(--Black);
+  display: flex;
+  width: 100%;
+  max-width: 602px;
+  padding: 24px;
+  flex-direction: column;
+  box-sizing: border-box;
+  overflow-y: auto;
 }

@@ -24,8 +24,8 @@
 
 .selectBox {
   position: relative;
-  /* width: 285px; */
-  width: 100%;
+  width: 285px;
+  /* width: 100%; */
   max-width: 285px;
   color: var(--White);
   font-size: 18px;
