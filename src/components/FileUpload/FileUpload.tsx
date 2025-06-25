@@ -6,7 +6,7 @@ import {
 } from "react";
 import { useDropzone } from "react-dropzone";
 import Upload from "../../assets/icons/upload.svg?react";
-import styles from "./FileUpload.module.css";
+import styles from "./fileupload.module.css";
 
 interface IProps {
   file: File | null;
