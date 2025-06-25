@@ -1,0 +1,125 @@
+.container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 100px 0;
+  background-color: var(--Yellow);
+  overflow: hidden;
+}
+.wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  max-width: 1320px;
+  width: 100%;
+  z-index: 1;
+}
+.textWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.title,
+.titleBlue {
+  color: var(--Grey-BG);
+  text-align: center;
+  font-size: 80px;
+  font-weight: 700;
+  line-height: 90px;
+  text-transform: uppercase;
+}
+.title {
+  max-width: 900px;
+}
+.titleBlue {
+  color: var(--Blue);
+}
+.subTitle {
+  color: var(--Grey-BG);
+  text-align: center;
+  font-size: 24px;
+  line-height: 32px;
+  max-width: 848px;
+  margin-bottom: 64px;
+}
+.description {
+  text-align: center;
+  font-size: 36px;
+  font-weight: 500;
+  line-height: 48px;
+  color: var(--Grey-BG);
+  margin: 20px 0;
+}
+.triangleFirst,
+.triangleSecond {
+  position: absolute;
+  width: 13.49rem;
+  height: 8.75rem;
+  color: var(--Orange);
+}
+.triangleFirst {
+  top: 50%;
+  left: 0;
+}
+.triangleSecond {
+  top: 19%;
+  left: 14%;
+}
+.decorStar {
+  position: absolute;
+  top: 20%;
+  right: 0;
+  rotate: 180deg;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 10.625rem;
+  height: 20.83rem;
+  background-image: url(../../assets/images/hero_decor_left.png);
+}
+.modalContent {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+@media (orientation: portrait) {
+  .container {
+    padding: 40px 16px 0;
+  }
+  .wrapper {
+    align-items: normal;
+    margin-bottom: 128px;
+  }
+  .title,
+  .titleBlue {
+    font-size: 30px;
+    line-height: 38px;
+  }
+
+  .subTitle {
+    font-size: 20px;
+    line-height: 28px;
+    margin-bottom: 20px;
+  }
+  .triangleFirst {
+    position: static;
+    width: 28rem;
+    height: 18rem;
+    margin-bottom: 20px;
+  }
+  .triangleSecond {
+    display: none;
+  }
+  .decorStar {
+    bottom: 0;
+    top: unset;
+    left: 36%;
+    transform: translateX(-46%);
+    rotate: -90deg;
+    width: 29rem;
+    height: 56rem;
+    background-size: contain;
+  }
+}

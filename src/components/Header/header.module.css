@@ -1,0 +1,32 @@
+.container {
+  position: relative;
+  padding: 12px var(--padding-container-desktop);
+  display: flex;
+  align-items: center;
+  background: var(--Grey-BG);
+  z-index: 2;
+}
+.logoContainer {
+  height: 37px;
+  width: 127px;
+}
+.logo {
+  height: 100%;
+  width: 100%;
+}
+.navPanel {
+  margin: 0 auto;
+}
+
+@media (orientation: portrait) {
+  .container {
+    padding: var(--padding-container-mobile);
+  }
+  .navPanel {
+    display: none;
+  }
+  .logoContainer {
+    height: 30px;
+    width: 95px;
+  }
+}

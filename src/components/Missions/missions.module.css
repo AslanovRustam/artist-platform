@@ -1,0 +1,113 @@
+.container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 100px 0;
+  background-image: url(../../assets/images/bg-missions.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  overflow: hidden;
+}
+.wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 40px;
+  max-width: 1320px;
+  width: 100%;
+  z-index: 1;
+}
+.title {
+  color: var(--Yellow);
+  text-align: center;
+  font-size: 80px;
+  font-weight: 700;
+  line-height: 90px;
+  text-transform: uppercase;
+}
+
+.subTitle,
+.subTitleGreen {
+  color: var(--White);
+  text-align: center;
+  font-size: 36px;
+  font-weight: 500;
+  line-height: 48px;
+  max-width: 961px;
+}
+.subTitleGreen {
+  color: var(--Yellow);
+}
+.description {
+  text-align: center;
+  font-size: 24px;
+  line-height: 32px;
+}
+.decorLeft {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 22.3rem;
+  height: 22.86rem;
+  background-image: url(../../assets/images/decor-triangle.png);
+  /* z-index: -1; */
+}
+.decorRight {
+  position: absolute;
+  top: 50%;
+  right: -3%;
+  transform: translateY(-50%);
+  rotate: -13deg;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 10rem;
+  height: 10rem;
+  background-image: url(../../assets/images/eclipse.png);
+  /* z-index: -1; */
+}
+.mobileDeviderShow {
+  display: none;
+}
+@media (orientation: portrait) {
+  .container {
+    padding: 60px 16px;
+    align-items: normal;
+  }
+  .wrapper {
+    align-items: center;
+    gap: 20px;
+  }
+  .title {
+    font-size: 30px;
+    line-height: 38px;
+  }
+
+  .subTitle,
+  .subTitleGreen {
+    font-size: 24px;
+    line-height: 32px;
+  }
+  .subTitleGreen {
+    text-wrap-style: pretty;
+  }
+  .description {
+    font-size: 20px;
+    line-height: 28px;
+  }
+  .decorLeft,
+  .decorRight {
+    display: none;
+  }
+  .mobileDevider {
+    display: none;
+  }
+  .mobileDeviderShow {
+    display: block;
+  }
+}

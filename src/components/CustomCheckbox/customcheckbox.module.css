@@ -1,0 +1,52 @@
+.checkBoxLabel {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: end;
+  cursor: pointer;
+}
+
+.customCheckbox {
+  position: relative;
+  width: 24px;
+  height: 24px;
+  border-radius: 4px;
+  border: 2px solid var(--Light-Grey);
+  margin-right: 8px;
+  transition: var(--transition);
+}
+.checkedBg {
+  background: var(--Yellow);
+  border-color: transparent;
+}
+.customCheckbox:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.checkboxInput:checked + .customCheckbox:after {
+  display: block;
+}
+
+.checkBoxLabel .customCheckbox:after {
+  left: 0.4em;
+  top: 0.15em;
+  width: 0.4125em;
+  height: 0.625em;
+  border: solid var(--Grey-BG);
+  border-width: 0 0.1562em 0.1562em 0;
+  transform: rotate(45deg);
+}
+.text {
+  color: var(--White);
+  font-size: 18px;
+  line-height: 22px;
+}
+.checkboxInput {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}

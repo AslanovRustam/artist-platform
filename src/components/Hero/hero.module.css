@@ -1,0 +1,106 @@
+.container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 100px 0;
+  background-image: url(../../assets/images/bg-hero.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+.wrapper {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  max-width: 1320px;
+}
+.title {
+  font-size: 96px;
+  font-weight: 700;
+  line-height: 110px;
+  text-transform: uppercase;
+  text-align: center;
+  z-index: 1;
+
+  span {
+    color: var(--Yellow);
+  }
+}
+.subTitle {
+  text-align: center;
+  font-size: 36px;
+  font-weight: 500;
+  line-height: 48px;
+  margin: 20px 0;
+  z-index: 1;
+}
+
+.description {
+  text-align: center;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 32px;
+  margin-bottom: 64px;
+}
+.decorLeft {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 10.625rem;
+  height: 20.83rem;
+  background-image: url(../../assets/images/hero_decor_left.png);
+}
+.decorRight {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 14.95rem;
+  height: 15.3125rem;
+  background-image: url(../../assets/images/hero_decor_right.png);
+}
+
+@media (orientation: portrait) {
+  .container {
+  }
+  .title {
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 38px;
+  }
+  .wrapper {
+    padding: 50px 13px;
+  }
+
+  .subTitle {
+    font-size: 24px;
+    line-height: 32px;
+  }
+
+  .description {
+    margin-bottom: 64px;
+    font-size: 20px;
+    line-height: 28px;
+    margin-bottom: 40px;
+  }
+
+  .decorLeft {
+    top: 0;
+    transform: translateY(0);
+    width: 19.73rem;
+    height: 38.67rem;
+  }
+  .decorRight {
+    top: unset;
+    bottom: 0;
+    transform: translateY(0);
+    width: 35.47rem;
+    height: 36.53rem;
+  }
+}
