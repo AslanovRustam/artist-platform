@@ -7,6 +7,7 @@ import PopupArtistRegistration from "../Popups/PopupArtistRegistration";
 // Styles
 import styles from "./missions.module.css";
 import "react-responsive-modal/styles.css";
+import { MaskText } from "../AnimatedText/MaskText";
 
 function Missions() {
   const [isPopupOpen, setIsPopupOpen] = useState<boolean>(false);
@@ -49,21 +50,31 @@ function Missions() {
   return (
     <div className={styles.container}>
       <div className={styles.wrapper}>
-        <h2 className={styles.title}>Our Mission</h2>
+        <h2 className={styles.title}>
+          <MaskText text="Our Mission" stagger={1} />
+        </h2>
         <p className={styles.subTitle}>
-          Amp is the revolutionary music artist booking hub connecting top
-          talent with venues in one seamless flow.
+          <MaskText
+            text=" Amp is the revolutionary music artist booking hub connecting top
+          talent with venues in one seamless flow."
+            stagger={2}
+          />
         </p>
         <p className={styles.subTitleGreen}>
-          Get booked.<br className={styles.mobileDeviderShow}></br> Get seen.
-          Get paid.
+          <MaskText stagger={3}>
+            Get booked.<br className={styles.mobileDeviderShow}></br> Get seen.
+            Get paid.
+          </MaskText>
         </p>
-        <p className={styles.description}>
-          We're here to amplify MENA's Talent.
-          <br className={styles.mobileDevider}></br> This isn't just about gigs.
-          It's about growth. <br className={styles.mobileDevider}></br>We give
-          artists visibility, clarity, and control.
-        </p>
+        <div className={styles.description}>
+          <MaskText stagger={4}>
+            We're here to amplify MENA's Talent.
+            <br className={styles.mobileDevider} />
+            This isn't just about gigs. It's about growth.
+            <br className={styles.mobileDevider} />
+            We give artists visibility, clarity, and control.
+          </MaskText>
+        </div>
         <ButtonWithIcon text="Get Started" onClick={togglePopup} />
       </div>
       <div className={styles.decorLeft} />

@@ -15,6 +15,7 @@ import Location from "../../assets/icons/location.svg?react";
 import Decor from "../../assets/icons/decorLeft.svg?react";
 // Styles
 import styles from "./brief.module.css";
+import { MaskText } from "../AnimatedText/MaskText";
 
 type Props = {};
 
@@ -41,23 +42,28 @@ export default function Brief({}: Props) {
     }));
   };
 
-
-
   return (
     <div className={styles.container}>
       <div className={styles.wrapper}>
-        <h2 className={styles.title}>
-          You bring the brief <br></br>
-          <span className={styles.titleGreen}>We bring the beats</span>
-        </h2>
-        <p className={styles.subTitle}>
-          Whether you're curating a festival stage, launching a product, or
-          planning your next epic afterparty{" "}
-          <br className={styles.mobileDevider}></br>—{" "}
-        </p>
-        <span className={styles.subTitleGreen}>
-          we've got the talent, tools, and tech to make it seamless.
-        </span>
+        <MaskText stagger={1}>
+          <p className={styles.title}>
+            You bring the brief <br></br>
+            <span className={styles.titleGreen}>We bring the beats</span>
+          </p>
+        </MaskText>
+        <MaskText stagger={2}>
+          <div className={styles.alighItems}>
+            <p className={styles.subTitle}>
+              Whether you're curating a festival stage, launching a product, or
+              planning your next epic afterparty{" "}
+              <br className={styles.mobileDevider}></br>—{" "}
+            </p>
+            <span className={styles.subTitleGreen}>
+              we've got the talent, tools, and tech to make it seamless.
+            </span>
+          </div>
+        </MaskText>
+
         <form className={styles.form}>
           <Input
             label="Search Artist"
