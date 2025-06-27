@@ -96,3 +96,34 @@
     display: none;
   }
 }
+
+.triangle {
+  opacity: 0;
+  transform: scale(0);
+  transform-origin: center;
+  animation: none;
+}
+
+.animate .triangle1 {
+  animation: appear 0.3s ease-out forwards;
+  animation-delay: 0s;
+}
+.animate .triangle2 {
+  animation: appear 0.3s ease-out forwards;
+  animation-delay: 0.2s;
+}
+.animate .triangle3 {
+  animation: appear 0.3s ease-out forwards;
+  animation-delay: 0.4s;
+}
+
+@keyframes appear {
+  0% {
+    opacity: 0;
+    transform: scale(0);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}

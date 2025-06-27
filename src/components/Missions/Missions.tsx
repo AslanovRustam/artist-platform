@@ -8,6 +8,7 @@ import PopupArtistRegistration from "../Popups/PopupArtistRegistration";
 import styles from "./missions.module.css";
 import "react-responsive-modal/styles.css";
 import { MaskText } from "../AnimatedText/MaskText";
+import Magnetic from "../Magnetic/Magnetic";
 
 function Missions() {
   const [isPopupOpen, setIsPopupOpen] = useState<boolean>(false);
@@ -75,7 +76,9 @@ function Missions() {
             We give artists visibility, clarity, and control.
           </MaskText>
         </div>
-        <ButtonWithIcon text="Get Started" onClick={togglePopup} />
+        <Magnetic>
+          <ButtonWithIcon text="Get Started" onClick={togglePopup} />
+        </Magnetic>
       </div>
       <div className={styles.decorLeft} />
       <div className={styles.decorRight} />

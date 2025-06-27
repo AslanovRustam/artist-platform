@@ -33,11 +33,13 @@
   font-size: 24px;
   line-height: 32px;
 }
+.decorIcon {
+  width: 11.56rem;
+  height: 11.56rem;
+}
 .decorLeft,
 .decorRight {
   position: absolute;
-  width: 11.56rem;
-  height: 11.56rem;
   z-index: -1;
 }
 .decorLeft {
@@ -131,6 +133,7 @@
   .imageWrapper {
     width: 100%;
     height: auto;
+    margin-bottom: 16px;
   }
   .navLink {
     position: static;

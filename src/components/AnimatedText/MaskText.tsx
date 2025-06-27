@@ -1,15 +1,16 @@
 import { useRef } from "react";
 import { useInView, motion } from "framer-motion";
 import s from "./styles.module.css";
+import clsx from "clsx";
 
 interface Props {
   text?: string;
   stagger?: number;
-  styles?: string;
   children?: React.ReactNode;
+  className?: string;
 }
 
-export function MaskText({ text, stagger = 0, children }: Props) {
+export function MaskText({ text, stagger = 0, children, className }: Props) {
   const body = useRef(null);
 
   const isInView = useInView(body, { once: true, amount: 0.5 });
@@ -27,7 +28,7 @@ export function MaskText({ text, stagger = 0, children }: Props) {
   };
 
   return (
-    <div className={s.overflowHidden} ref={body}>
+    <div className={clsx(s.overflowHidden, className)} ref={body}>
       <motion.div
         custom={stagger}
         variants={variants}

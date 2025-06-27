@@ -57,7 +57,7 @@
   width: 22.3rem;
   height: 22.86rem;
   background-image: url(../../assets/images/decor-triangle.png);
-  /* z-index: -1; */
+  animation: levitate 4s ease-in-out infinite;
 }
 .decorRight {
   position: absolute;
@@ -70,7 +70,7 @@
   width: 10rem;
   height: 10rem;
   background-image: url(../../assets/images/eclipse.png);
-  /* z-index: -1; */
+  animation: levitate 6s ease-in-out 1s infinite;
 }
 .mobileDeviderShow {
   display: none;
@@ -127,5 +127,17 @@
   }
   .mobileDeviderShow {
     display: block;
+  }
+}
+
+@keyframes levitate {
+  0% {
+    transform: translateY(-50%) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-52%) rotate(1.5deg);
+  }
+  100% {
+    transform: translateY(-50%) rotate(0deg);
   }
 }

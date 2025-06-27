@@ -5,6 +5,7 @@ import { MaskText } from "../AnimatedText/MaskText";
 import { ANCHORS } from "../../utils/constants";
 // Styles
 import styles from "./hero.module.css";
+import Magnetic from "../Magnetic/Magnetic";
 
 type Props = {};
 
@@ -28,7 +29,9 @@ function Hero({}: Props) {
             Built to simplify everystep, from discovery to deal.
           </MaskText>
         </div>
-        <ButtonWithIcon text="How It Works" href={ANCHORS.booking.anchor} />
+        <Magnetic>
+          <ButtonWithIcon text="How It Works" href={ANCHORS.booking.anchor} />
+        </Magnetic>
       </div>
       <div className={styles.decorLeft} />
       <div className={styles.decorRight} />

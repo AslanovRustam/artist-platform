@@ -45,14 +45,19 @@
 }
 .decorLeft {
   position: absolute;
-  top: 50%;
-  left: 0;
+  top: 25%;
+  /* left: 0; */
   transform: translateY(-50%);
   background-size: cover;
   background-repeat: no-repeat;
-  width: 10.625rem;
+  /* width: 10.625rem;
   height: 20.83rem;
-  background-image: url(../../assets/images/hero_decor_left.png);
+  background-image: url(../../assets/images/hero_decor_left.png); */
+  left: -11%;
+  height: 21rem;
+  width: 21rem;
+  background-image: url(../../assets/images/Star.png);
+  animation: spin 10s linear infinite;
 }
 .decorRight {
   position: absolute;
@@ -91,9 +96,9 @@
   }
 
   .decorLeft {
-    top: 0;
-    transform: translateY(0);
-    width: 19.73rem;
+    top: 2%;
+    left: -22%;
+    width: 38.67rem;
     height: 38.67rem;
   }
   .decorRight {
@@ -102,5 +107,13 @@
     transform: translateY(0);
     width: 35.47rem;
     height: 36.53rem;
+  }
+}
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(180deg);
   }
 }
