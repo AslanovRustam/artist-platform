@@ -1,4 +1,3 @@
-import React from "react";
 import "./equalizer.css";
 
 export default function Equalizer() {
@@ -9,7 +8,6 @@ export default function Equalizer() {
     { x: 44.8125, y: 0, height: 30.9375 },
   ];
 
-  // Предварительно сгенерированные наборы анимаций
   const animationClasses = [
     "eq-style-0",
     "eq-style-1",
@@ -18,7 +16,6 @@ export default function Equalizer() {
     "eq-style-4",
   ];
 
-  // Один раз при монтировании выбираем случайные стили
   const randomClasses = bars.map(() => {
     const randomIndex = Math.floor(Math.random() * animationClasses.length);
     return animationClasses[randomIndex];
