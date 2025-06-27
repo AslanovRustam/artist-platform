@@ -3,7 +3,7 @@ import Marquee from "react-fast-marquee";
 // Images
 import AMPLogo from "../../assets/icons/devider/AMPLogo.svg?react";
 import Purple from "../../assets/icons/devider/purpleElement.svg?react";
-import Equalizer from "../Equalizer/Equalizer";
+// import Equalizer from "../Equalizer/Equalizer";
 import AnimatedPurple from "../../assets/icons/devider/download.svg?react";
 // Styles
 import styles from "./devider.module.css";
@@ -55,7 +55,4 @@ export default function DeviderAnimated({
       </ul>
     </Marquee>
   );
-}
-{
-  /* <Purple className={styles.icon} />; */
 }
