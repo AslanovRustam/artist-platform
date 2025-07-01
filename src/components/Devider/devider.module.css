@@ -38,7 +38,8 @@
 }
 .icon,
 .iconFull,
-.iconLogo {
+.iconLogo,
+.iconFullGreen {
   width: 100%;
   height: 100%;
   color: var(--White);
@@ -50,6 +51,10 @@
 }
 .iconLogo {
   opacity: 1;
+}
+.iconFullGreen {
+  opacity: 1;
+  color: var(--Yellow);
 }
 .green {
   background-color: var(--Yellow);

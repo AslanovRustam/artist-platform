@@ -1,14 +1,12 @@
 import { useState } from "react";
-import { Modal } from "react-responsive-modal";
 // Components
 import ButtonWithIcon from "../Button/ButtonWithIcon";
 import PopupArtistRegistration from "../Popups/PopupArtistRegistration";
-
-// Styles
-import styles from "./missions.module.css";
-import "react-responsive-modal/styles.css";
+import CustomModal from "../CustomModal/CustomModal";
 import { MaskText } from "../AnimatedText/MaskText";
 import Magnetic from "../Magnetic/Magnetic";
+// Styles
+import styles from "./missions.module.css";
 
 function Missions() {
   const [isPopupOpen, setIsPopupOpen] = useState<boolean>(false);
@@ -17,37 +15,6 @@ function Missions() {
     setIsPopupOpen(!isPopupOpen);
   };
 
-  const closeIcon = (
-    <svg
-      width="24"
-      height="24"
-      viewBox="0 0 24 24"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-    >
-      <g clipPath="url(#clip0_106_1043)">
-        <path
-          d="M18 6L6 18"
-          stroke="#6E7684"
-          strokeWidth="2"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-        />
-        <path
-          d="M6 6L18 18"
-          stroke="#6E7684"
-          strokeWidth="2"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-        />
-      </g>
-      <defs>
-        <clipPath id="clip0_106_1043">
-          <rect width="24" height="24" fill="white" />
-        </clipPath>
-      </defs>
-    </svg>
-  );
   return (
     <div className={styles.container}>
       <div className={styles.wrapper}>
@@ -82,18 +49,10 @@ function Missions() {
       </div>
       <div className={styles.decorLeft} />
       <div className={styles.decorRight} />
-      <Modal
-        open={isPopupOpen}
-        onClose={togglePopup}
-        center
-        classNames={{
-          modal: styles.modalContainer,
-          overlay: styles.customOverlay,
-        }}
-        closeIcon={closeIcon}
-      >
+
+      <CustomModal open={isPopupOpen} onClose={togglePopup}>
         <PopupArtistRegistration onClose={togglePopup} />
-      </Modal>
+      </CustomModal>
     </div>
   );
 }

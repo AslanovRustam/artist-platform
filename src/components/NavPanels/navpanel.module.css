@@ -5,7 +5,6 @@
 }
 .item {
   color: var(--White);
-  font-family: "Segoe UI Symbol";
   font-size: 16px;
   line-height: 20px;
   letter-spacing: 0.7px;
@@ -22,7 +21,6 @@
     align-items: center;
   }
   .item {
-    font-family: Inter;
     font-size: 24px;
     font-weight: 500;
     line-height: 32px;

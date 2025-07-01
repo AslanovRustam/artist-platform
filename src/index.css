@@ -1,15 +1,20 @@
 @import "../node_modules/modern-normalize/modern-normalize.css";
+@import "swiper/css";
+@import "swiper/css/navigation";
+@import "swiper/css/pagination";
+@import "swiper/css/scrollbar";
 
 :root {
-  font-family: "Segoe UI", system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: "Segoe UI", system-ui, Gotham, Helvetica, Arial, sans-serif;
   line-height: 1.5;
-  font-weight: 400;
+  font-weight: 500;
 
   /* colors */
   --White: #fff;
   --Yellow: #c1ff16;
   --Grey-BG: #1c1c1c;
   --Grey-BG-2: #303030;
+  --Grey-BG-3: #2a2e36;
   --Dark-Grey: #262626;
   --Grey-Icon: #99a1af;
   --Light-Grey: #6e7684;
@@ -17,11 +22,13 @@
   --Blue: #2f4acb;
   --Purple: #8181d5;
   --Black: #181718;
+  --Red: #ff0033;
 
   /* utils */
   --transition: all 0.3s ease-in-out;
   --padding-container-desktop: 300px;
   --padding-container-mobile: 16px;
+  --padding-inner-section: 100px;
 
   color-scheme: light dark;
   color: var(--White);
@@ -34,34 +41,22 @@
 }
 
 @font-face {
-  font-family: "Inter";
-  font-weight: 300;
-  src: local("Inter"),
-    url(./assets/fonts/Inter/Inter-Light-300.ttf) format("opentype");
-}
-@font-face {
-  font-family: "Inter";
-  font-weight: 400;
-  src: local("Inter"),
-    url(./assets/fonts/Inter/Inter-Regular-400.ttf) format("opentype");
-}
-@font-face {
-  font-family: "Inter";
+  font-family: "Gotham";
   font-weight: 500;
-  src: local("Inter"),
-    url(./assets/fonts/Inter/Inter-Medium-500.ttf) format("opentype");
+  src: local("Gotham"),
+    url(./assets/fonts/Gotham/Gotham-Medium-500.woff) format("opentype");
 }
 @font-face {
-  font-family: "Inter";
+  font-family: "Gotham";
   font-weight: 700;
-  src: local("Inter"),
-    url(./assets/fonts/Inter/Inter-Bold-700.ttf) format("opentype");
+  src: local("Gotham"),
+    url(./assets/fonts/Gotham/Gotham-Bold-700.woff) format("opentype");
 }
 @font-face {
-  font-family: "Cairo";
-  font-weight: 700;
-  src: local("Cairo"),
-    url(./assets/fonts/Cairo/Cairo-Bold.ttf) format("opentype");
+  font-family: "Gotham-Book";
+  font-weight: 500;
+  src: local("Gotham-Book"),
+    url(./assets/fonts/Gotham-Book/Gotham-Book-Font-500.otf) format("opentype");
 }
 
 * {
@@ -76,9 +71,9 @@
 
 body {
   min-height: 100vh;
-  font-family: Inter;
+  font-family: Gotham;
   font-style: normal;
-  font-weight: 400;
+  font-weight: 500;
   line-height: 32px;
   scroll-behavior: smooth;
   overflow-x: hidden;
@@ -115,5 +110,21 @@ button {
   max-width: fit-content;
 }
 
+.swiper-pagination-bullet {
+  width: 20px;
+  height: 20px;
+  background-color: transparent;
+  background-image: url(./assets/images/paginationDefault.png);
+}
+.swiper-pagination-bullet-active {
+  background-image: url(./assets/images/paginationActive.png);
+}
+.swiper-pagination-bullets {
+  position: sticky;
+  margin-top: 64px;
+}
 @media (orientation: portrait) {
+  .swiper-pagination-bullets {
+    margin-top: 40px;
+  }
 }

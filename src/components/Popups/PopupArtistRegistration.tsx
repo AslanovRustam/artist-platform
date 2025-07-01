@@ -312,8 +312,8 @@ export default function PopupArtistRegistration({ onClose }: Props) {
           <p className={styles.terms}>
             <NavLink to="#" className={styles.linkYellow}>
               Terms of Service
-            </NavLink>{" "}
-              and {" "}
+            </NavLink>
+            <span> and </span>
             <NavLink to="#" className={styles.linkYellow}>
               Privacy Policy
             </NavLink>

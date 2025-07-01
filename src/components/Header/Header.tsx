@@ -2,8 +2,7 @@ import { NavLink } from "react-router";
 //Componets
 import Menu from "../Menu/Menu";
 import Navpanel from "../NavPanels/Navpanel";
-//Images
-import Logo from "../../assets/icons/logo.svg?react";
+import AnimatedLogo from "../AnimatedLogo/AnimatedLogo";
 //Utils
 import { ROUTES } from "../../utils/constants";
 //Styles
@@ -15,7 +14,7 @@ function Header({}: Props) {
   return (
     <header className={styles.container}>
       <NavLink to={ROUTES.home} className={styles.logoContainer}>
-        <Logo className={styles.logo} />
+        <AnimatedLogo />
       </NavLink>
       <div className={styles.navPanel}>
         <Navpanel />

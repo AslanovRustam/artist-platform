@@ -1,7 +1,7 @@
 import { useRef } from "react";
 import { useInView, motion } from "framer-motion";
-import s from "./styles.module.css";
 import clsx from "clsx";
+import s from "./styles.module.css";
 
 interface Props {
   text?: string;

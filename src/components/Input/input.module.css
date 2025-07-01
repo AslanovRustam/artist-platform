@@ -38,6 +38,7 @@
   border: 0.5px solid var(--White);
   background: var(--Dark-Grey);
   padding: 20px 20px 20px 40px;
+  font-family: Gotham-Book;
 }
 
 .select {

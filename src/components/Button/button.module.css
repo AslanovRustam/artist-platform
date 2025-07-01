@@ -5,7 +5,6 @@
   transition: var(--transition);
   border-radius: 999px;
   color: #000;
-  font-family: "Segoe UI";
   font-size: 16px;
   font-weight: 600;
   line-height: 20px;
@@ -86,6 +85,34 @@
   margin: 0 auto;
 }
 
+.artistPage,
+.artistPageBlack {
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 24px;
+  text-transform: uppercase;
+  padding: 19px 48px 21px;
+}
+.artistPageBlack {
+  background-color: var(--Grey-BG);
+  color: var(--Yellow);
+
+  &:hover,
+  &:focus {
+    background-color: var(--White);
+    color: var(--Grey-BG);
+  }
+}
+.fullWidthAll {
+  width: 100%;
+}
+.tours {
+  width: 100%;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 24px;
+  padding: 19px 48px 21px;
+}
 @media (orientation: portrait) {
   .fullWidth {
     width: 100%;
@@ -104,5 +131,11 @@
     font-weight: 700;
     line-height: 22px;
     padding: 20px 0 22px;
+  }
+  .artistPage {
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 22px;
+    width: 100%;
   }
 }

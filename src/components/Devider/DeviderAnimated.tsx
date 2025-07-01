@@ -11,7 +11,7 @@ import styles from "./devider.module.css";
 type Props = {
   direction?: "left" | "right" | "up" | "down";
   speed?: number;
-  className: "green" | "transparent" | "logo";
+  className: "green" | "transparent" | "logo" | "transparentGreen";
   pauseOnHover?: boolean;
 };
 
@@ -33,7 +33,8 @@ export default function DeviderAnimated({
           styles.list,
           className === "green" && styles.green,
           className === "transparent" && styles.transparent,
-          className === "logo" && styles.logoList
+          className === "logo" && styles.logoList,
+          className === "transparentGreen" && styles.transparentGreen
         )}
       >
         {Array.from({ length: 36 }).map((_, i) => (
@@ -49,6 +50,9 @@ export default function DeviderAnimated({
 
               // <AnimatedPurple className={styles.icon} />
               //   <Equalizer />
+            )}
+            {className === "transparentGreen" && (
+              <AnimatedPurple className={styles.iconFullGreen} />
             )}
           </li>
         ))}

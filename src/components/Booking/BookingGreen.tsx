@@ -1,5 +1,4 @@
 import { useState } from "react";
-import { Modal } from "react-responsive-modal";
 import { useInView } from "react-intersection-observer";
 import clsx from "clsx";
 // Components
@@ -7,15 +6,11 @@ import ButtonWithIcon from "../Button/ButtonWithIcon";
 import PopupBooking from "../Popups/PopupBooking";
 import { MaskText } from "../AnimatedText/MaskText";
 import Magnetic from "../Magnetic/Magnetic";
-// Images
-// import Triangle from "../../assets/icons/decorLeft.svg?react";
+import CustomModal from "../CustomModal/CustomModal";
 // Styles
 import styles from "./bookinggreen.module.css";
-import "react-responsive-modal/styles.css";
 
-type Props = {};
-
-function BookingGreen({}: Props) {
+function BookingGreen() {
   const [isPopupOpen, setIsPopupOpen] = useState<boolean>(false);
 
   const { ref: triangleRef1, inView: inView1 } = useInView({
@@ -31,37 +26,6 @@ function BookingGreen({}: Props) {
     setIsPopupOpen(!isPopupOpen);
   };
 
-  const closeIcon = (
-    <svg
-      width="24"
-      height="24"
-      viewBox="0 0 24 24"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-    >
-      <g clipPath="url(#clip0_106_1043)">
-        <path
-          d="M18 6L6 18"
-          stroke="#6E7684"
-          strokeWidth="2"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-        />
-        <path
-          d="M6 6L18 18"
-          stroke="#6E7684"
-          strokeWidth="2"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-        />
-      </g>
-      <defs>
-        <clipPath id="clip0_106_1043">
-          <rect width="24" height="24" fill="white" />
-        </clipPath>
-      </defs>
-    </svg>
-  );
   return (
     <>
       <div className={styles.container}>
@@ -144,20 +108,9 @@ function BookingGreen({}: Props) {
         </svg>
         <div className={styles.decorStar} />
       </div>
-
-      <Modal
-        open={isPopupOpen}
-        onClose={togglePopup}
-        center
-        classNames={{
-          modal: styles.modalContainer,
-          overlay: styles.customOverlay,
-          closeIcon: styles.customCloseButton,
-        }}
-        closeIcon={closeIcon}
-      >
+      <CustomModal open={isPopupOpen} onClose={togglePopup}>
         <PopupBooking onClose={togglePopup} />
-      </Modal>
+      </CustomModal>
     </>
   );
 }

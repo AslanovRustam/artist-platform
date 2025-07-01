@@ -1,0 +1,27 @@
+.animatedLogoContainer {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  color: var(--White);
+  transition: var(--transition);
+}
+.animatedLogoContainer:hover .logoText {
+  background-color: var(--Grey-BG);
+  color: var(--Yellow);
+}
+.wrapper {
+  width: 32px;
+  height: 32px;
+  background-color: var(--Yellow);
+  border-radius: 50%;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--Grey-BG);
+}
+.logoText {
+  width: 79px;
+  height: 33px;
+  transition: var(--transition);
+}

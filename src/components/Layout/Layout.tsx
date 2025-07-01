@@ -3,9 +3,7 @@ import { Suspense } from "react";
 import Header from "../Header/Header";
 import Footer from "../Footer/Footer";
 
-type Props = {};
-
-function Layout({}: Props) {
+function Layout() {
   return (
     <>
       <Header />

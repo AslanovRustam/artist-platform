@@ -36,6 +36,7 @@
   padding: 20px 48px 20px 40px;
   transition: var(--transition);
   cursor: pointer;
+  font-family: Gotham-Book;
 }
 .selectBoxWOIcon {
   padding: 20px 48px 20px 16px;
@@ -77,6 +78,7 @@
   z-index: 2;
   transition: var(--transition);
   overflow: hidden;
+  font-family: Gotham-Book;
 }
 
 .dropdown {

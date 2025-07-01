@@ -24,7 +24,6 @@
   color: var(--Yellow);
   text-align: center;
   font-size: 80px;
-  font-weight: 700;
   line-height: 90px;
   text-transform: uppercase;
 }
@@ -36,7 +35,7 @@
   font-size: 36px;
   font-weight: 500;
   line-height: 48px;
-  max-width: 961px;
+  max-width: 1009px;
 }
 .subTitleGreen {
   color: var(--Yellow);
@@ -46,6 +45,7 @@
   font-size: 24px;
   line-height: 32px;
   max-width: 580px;
+  font-family: Gotham-Book;
 }
 .decorLeft {
   position: absolute;

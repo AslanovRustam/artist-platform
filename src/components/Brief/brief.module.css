@@ -16,8 +16,6 @@
   color: var(--White);
   text-align: center;
   font-size: 80px;
-  font-style: normal;
-  font-weight: 700;
   line-height: 90px;
   text-transform: uppercase;
 }
@@ -29,6 +27,7 @@
 }
 .subTitle,
 .subTitleGreen {
+  font-family: Gotham-Book;
   max-width: 638px;
   color: var(--White);
   text-align: center;

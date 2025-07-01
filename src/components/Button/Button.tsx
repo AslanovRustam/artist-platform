@@ -10,6 +10,7 @@ type Props = {
   className?: string;
   children?: ReactNode;
   fullWidth?: boolean;
+  fullWidthAll?: boolean;
 };
 
 function Button({
@@ -20,6 +21,7 @@ function Button({
   className,
   children,
   fullWidth,
+  fullWidthAll,
 }: Props) {
   return (
     <button
@@ -29,7 +31,8 @@ function Button({
       className={clsx(
         styles.button,
         className && styles[className],
-        fullWidth && styles.fullWidth
+        fullWidth && styles.fullWidth,
+        fullWidthAll && styles.fullWidthAll
       )}
     >
       <span>{text}</span>

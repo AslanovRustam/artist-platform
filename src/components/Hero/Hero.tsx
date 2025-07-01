@@ -1,15 +1,12 @@
 import ButtonWithIcon from "../Button/ButtonWithIcon";
-import { TitleByWord } from "../AnimatedText/TitleByWord";
 import { MaskText } from "../AnimatedText/MaskText";
+import Magnetic from "../Magnetic/Magnetic";
 // Utils
 import { ANCHORS } from "../../utils/constants";
 // Styles
 import styles from "./hero.module.css";
-import Magnetic from "../Magnetic/Magnetic";
 
-type Props = {};
-
-function Hero({}: Props) {
+function Hero() {
   return (
     <div className={styles.container}>
       <div className={styles.wrapper}>
@@ -20,7 +17,9 @@ function Hero({}: Props) {
         </div>
 
         <div className={styles.subTitle}>
-          <TitleByWord text="Book artists. Drop stress. Raise the volume." />
+          <MaskText stagger={1}>
+            Book artists. Drop stress. Raise the volume.
+          </MaskText>
         </div>
         <div className={styles.description}>
           <MaskText stagger={1}>

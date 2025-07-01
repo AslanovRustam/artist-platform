@@ -19,9 +19,7 @@ import Location from "../../assets/icons/location.svg?react";
 // Styles
 import styles from "./brief.module.css";
 
-type Props = {};
-
-export default function Brief({}: Props) {
+export default function Brief() {
   const initialLocations: ICheckbox[] = LOCATIONS.map((loc) => ({
     name: loc,
     checked: false,

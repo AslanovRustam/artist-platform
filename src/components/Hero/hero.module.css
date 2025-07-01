@@ -38,21 +38,17 @@
 
 .description {
   text-align: center;
+  font-family: Gotham-Book;
   font-size: 24px;
-  font-weight: 400;
   line-height: 32px;
   margin-bottom: 64px;
 }
 .decorLeft {
   position: absolute;
   top: 25%;
-  /* left: 0; */
   transform: translateY(-50%);
   background-size: cover;
   background-repeat: no-repeat;
-  /* width: 10.625rem;
-  height: 20.83rem;
-  background-image: url(../../assets/images/hero_decor_left.png); */
   left: -11%;
   height: 21rem;
   width: 21rem;

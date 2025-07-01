@@ -1,16 +1,16 @@
 import { NavLink } from "react-router";
+import { useRef, type MouseEvent } from "react";
 // Components
 import ButtonWithIcon from "../Button/ButtonWithIcon";
 import Button from "../Button/Button";
+import { MaskText } from "../AnimatedText/MaskText";
+import Magnetic from "../Magnetic/Magnetic";
 // Images
 import Star from "../../assets/icons/star.svg?react";
 // Utils
 import { ANCHORS, ARTISTS, ROUTES } from "../../utils/constants";
 // Styles
 import styles from "./talents.module.css";
-import { MaskText } from "../AnimatedText/MaskText";
-import Magnetic from "../Magnetic/Magnetic";
-import { useRef, type MouseEvent } from "react";
 
 function Talents() {
   const parallaxRef = useRef<HTMLDivElement>(null);
@@ -78,15 +78,15 @@ function Talents() {
           {ARTISTS.map((artist, index) => (
             <li className={styles.item} key={artist.id}>
               <MaskText stagger={index}>
-                <div className={styles.imageWrapper}>
+                <p className={styles.imageWrapper}>
                   <img
                     src={artist.photo}
                     alt={artist.name}
                     className={styles.photo}
                   />
-                </div>
+                </p>
                 <NavLink
-                  to={`${ROUTES.artists}/${artist.id}`}
+                  to={`${ROUTES.artists}/${artist.name}`}
                   className={styles.navLink}
                 >
                   <Button text="See more details" className="artists" />

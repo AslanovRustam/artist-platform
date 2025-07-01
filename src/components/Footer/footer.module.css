@@ -2,6 +2,9 @@
   padding: 80px var(--padding-container-desktop);
   display: flex;
   align-items: center;
+  justify-content: space-between;
+  position: relative;
+  overflow: hidden;
 }
 .logoContainer {
   height: 37px;
@@ -12,13 +15,14 @@
   width: 100%;
 }
 .navPanel {
-  margin: 0 auto;
+  /* margin: 0 auto; */
 }
 .list,
 .links {
   display: flex;
   align-items: center;
   gap: 32px;
+  z-index: 1;
 }
 .item {
   color: var(--White);
@@ -26,6 +30,7 @@
   font-weight: 300;
   line-height: 24px;
   transition: var(--transition);
+  font-family: Gotham-Book;
 
   &:hover,
   &:focus {
@@ -39,6 +44,11 @@
   &:focus {
     color: var(--Yellow);
   }
+}
+.triangle {
+  position: absolute;
+  right: 5em;
+  z-index: 0;
 }
 @media (orientation: portrait) {
   .footer {
@@ -58,5 +68,8 @@
     font-size: 16px;
     font-weight: 400;
     line-height: 22px;
+  }
+  .triangle {
+    display: none;
   }
 }

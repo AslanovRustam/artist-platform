@@ -1,17 +1,20 @@
 import { NavLink } from "react-router";
 //Images
-import Logo from "../../assets/icons/logo.svg?react";
+import AnimatedLogo from "../AnimatedLogo/AnimatedLogo";
 //Utils
 import { ANCHORS, ROUTES } from "../../utils/constants";
 //Styles
 import styles from "./footer.module.css";
+import BouncingBallFooter from "../BouncingBall/BouncingBallFooter";
+import TriangleAnimation from "../TriangleAnimation/TriangleAnimation";
 
 function Footer() {
   return (
     <footer className={styles.footer}>
       <NavLink to={ROUTES.home} className={styles.logoContainer}>
-        <Logo className={styles.logo} />
+        <AnimatedLogo />
       </NavLink>
+      <BouncingBallFooter />
       <nav className={styles.navPanel}>
         <ul className={styles.list}>
           <li className={styles.item}>
@@ -36,6 +39,9 @@ function Footer() {
           <NavLink to="#">Cookies</NavLink>
         </li>
       </ul>
+      <div className={styles.triangle}>
+        <TriangleAnimation />
+      </div>
     </footer>
   );
 }
