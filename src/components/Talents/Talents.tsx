@@ -4,7 +4,7 @@ import { useRef, type MouseEvent } from "react";
 import ButtonWithIcon from "../Button/ButtonWithIcon";
 import Button from "../Button/Button";
 import { MaskText } from "../AnimatedText/MaskText";
-import Magnetic from "../Magnetic/Magnetic";
+// import Magnetic from "../Magnetic/Magnetic";
 // Images
 import Star from "../../assets/icons/star.svg?react";
 // Utils
@@ -95,9 +95,9 @@ function Talents() {
             </li>
           ))}
         </ul>
-        <Magnetic>
-          <ButtonWithIcon text="view all artists" href={ROUTES.artists} />
-        </Magnetic>
+        {/* <Magnetic> */}
+        <ButtonWithIcon text="view all artists" href={ROUTES.artists} />
+        {/* </Magnetic> */}
         <div ref={starLeft} className={styles.decorLeft}>
           <Star className={styles.decorIcon} />
         </div>

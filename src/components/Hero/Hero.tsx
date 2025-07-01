@@ -1,6 +1,6 @@
 import ButtonWithIcon from "../Button/ButtonWithIcon";
 import { MaskText } from "../AnimatedText/MaskText";
-import Magnetic from "../Magnetic/Magnetic";
+// import Magnetic from "../Magnetic/Magnetic";
 // Utils
 import { ANCHORS } from "../../utils/constants";
 // Styles
@@ -28,9 +28,9 @@ function Hero() {
             Built to simplify everystep, from discovery to deal.
           </MaskText>
         </div>
-        <Magnetic>
-          <ButtonWithIcon text="How It Works" href={ANCHORS.booking.anchor} />
-        </Magnetic>
+        {/* <Magnetic> */}
+        <ButtonWithIcon text="How It Works" href={ANCHORS.booking.anchor} />
+        {/* </Magnetic> */}
       </div>
       <div className={styles.decorLeft} />
       <div className={styles.decorRight} />

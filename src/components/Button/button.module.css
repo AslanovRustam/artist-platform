@@ -138,4 +138,10 @@
     line-height: 22px;
     width: 100%;
   }
+  .brief {
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 22px;
+    padding: 13px 48px 13px 48px;
+  }
 }

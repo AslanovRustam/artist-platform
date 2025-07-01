@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import DeviderAnimated from "../../components/Devider/DeviderAnimated";
 import Gallery from "../../components/Gallery/Gallery";
 import About from "../../components/SingleArtist/About/About";
@@ -8,31 +9,31 @@ import Listen from "../../components/SingleArtist/Listen/Listen";
 import ReadyToBook from "../../components/SingleArtist/ReadyToBook/ReadyToBook";
 import Services from "../../components/SingleArtist/Services/Services";
 import Testimonials from "../../components/SingleArtist/Testimonials/Testimonials";
+import SoundWaves from "../../components/SoundWaves/SoundWaves";
 import styles from "./singleArtist.module.css";
 
 export default function SingleArtistPage() {
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }, []);
+
   return (
     <section className={styles.section}>
       <Hero />
-      <DeviderAnimated className="transparent" direction="right" speed={30} />
+      <SoundWaves />
       <About />
-      <DeviderAnimated className="logo" speed={20} />
+      <DeviderAnimated className="logo" />
       <Listen />
-      <DeviderAnimated className="logo" speed={60} direction="right" />
+      <DeviderAnimated className="logo" />
       <Experience />
-      <DeviderAnimated className="transparent" />
+      <SoundWaves />
       <Services />
-      <DeviderAnimated
-        className="transparentGreen"
-        direction="right"
-        speed={30}
-      />
+      <SoundWaves green />
       <Gallery />
-      <DeviderAnimated className="transparent" />
+      <SoundWaves />
       <Testimonials />
       <ReadyToBook />
       <Foloow />
-      <DeviderAnimated className="transparent" direction="right" />
     </section>
   );
 }

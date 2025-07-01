@@ -1,7 +1,10 @@
 import { Routes, Route } from "react-router";
+import { lazy } from "react";
 // Pages
-import Home from "./pages/Home/Home";
-import SingleArtistPage from "./pages/singleArtist/SingleArtistPage";
+const Home = lazy(() => import("./pages/Home/Home"));
+const SingleArtistPage = lazy(
+  () => import("./pages/singleArtist/SingleArtistPage")
+);
 // Layout
 import Layout from "./components/Layout/Layout";
 // Utils

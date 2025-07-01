@@ -5,7 +5,7 @@ import clsx from "clsx";
 import ButtonWithIcon from "../Button/ButtonWithIcon";
 import PopupBooking from "../Popups/PopupBooking";
 import { MaskText } from "../AnimatedText/MaskText";
-import Magnetic from "../Magnetic/Magnetic";
+// import Magnetic from "../Magnetic/Magnetic";
 import CustomModal from "../CustomModal/CustomModal";
 // Styles
 import styles from "./bookinggreen.module.css";
@@ -73,16 +73,15 @@ function BookingGreen() {
               Future-ready.
             </p>
           </MaskText>
-          <Magnetic>
-            <ButtonWithIcon
-              text="Get Started"
-              onClick={togglePopup}
-              className="black"
-            />
-          </Magnetic>
+          {/* <Magnetic> */}
+          <ButtonWithIcon
+            text="Get Started"
+            onClick={togglePopup}
+            className="black"
+          />
+          {/* </Magnetic> */}
         </div>
 
-        {/* <Triangle className={styles.triangleSecond} /> */}
         <svg
           viewBox="0 0 295 192"
           fill="none"

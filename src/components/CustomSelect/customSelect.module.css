@@ -115,5 +115,9 @@
   .selectBox {
     width: 100%;
     max-width: unset;
+    padding: 13px 48px 13px 40px;
+  }
+  .selectBoxWOIcon {
+    padding: 13px 48px 13px 40px;
   }
 }

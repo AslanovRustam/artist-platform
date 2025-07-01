@@ -1,10 +1,11 @@
 import Booking from "../../components/Booking/Booking";
 import BookingGreen from "../../components/Booking/BookingGreen";
 import Brief from "../../components/Brief/Brief";
-// import Devider from "../../components/Devider/Devider";
+import Devider from "../../components/Devider/Devider";
 import DeviderAnimated from "../../components/Devider/DeviderAnimated";
 import Hero from "../../components/Hero/Hero";
 import Missions from "../../components/Missions/Missions";
+import SoundWaves from "../../components/SoundWaves/SoundWaves";
 import Talents from "../../components/Talents/Talents";
 import styles from "./home.module.css";
 
@@ -12,16 +13,15 @@ export default function Home() {
   return (
     <section className={styles.section}>
       <Hero />
-      <DeviderAnimated className="green" speed={20} />
+      <Devider variant="default" />
       <Brief />
-      <DeviderAnimated className="transparent" direction="right" speed={30} />
+      <SoundWaves />
       <Talents />
-      <DeviderAnimated className="logo" speed={40} />
+      <DeviderAnimated className="logo" />
       <Missions />
-      <DeviderAnimated className="green" direction="right" />
+      <Devider variant="default" />
       <Booking />
       <BookingGreen />
-      <DeviderAnimated className="transparent" speed={50} />
     </section>
   );
 }

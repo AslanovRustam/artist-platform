@@ -3,12 +3,13 @@
   align-items: center;
   gap: 32px;
 }
-.item {
+.item button {
   color: var(--White);
   font-size: 16px;
   line-height: 20px;
   letter-spacing: 0.7px;
   transition: var(--transition);
+  cursor: pointer;
 
   &:hover,
   &:focus {
@@ -20,7 +21,7 @@
     flex-direction: column;
     align-items: center;
   }
-  .item {
+  .item button {
     font-size: 24px;
     font-weight: 500;
     line-height: 32px;
