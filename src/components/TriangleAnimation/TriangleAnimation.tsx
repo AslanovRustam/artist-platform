@@ -1,6 +1,6 @@
 import { useInView } from "react-intersection-observer";
 import clsx from "clsx";
-import styles from "./triangleAnimation.module.css";
+import styles from "./triangleanimation.module.css";
 
 export default function TriangleAnimation() {
   const { ref: triangleRef, inView } = useInView({
