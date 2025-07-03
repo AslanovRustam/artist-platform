@@ -8,7 +8,7 @@ import { MaskText } from "../AnimatedText/MaskText";
 // Images
 import Star from "../../assets/icons/star.svg?react";
 // Utils
-import { ANCHORS, ARTISTS, ROUTES } from "../../utils/constants";
+import { ANCHORS, ARTISTS_LIST, ROUTES } from "../../utils/constants";
 // Styles
 import styles from "./talents.module.css";
 
@@ -75,15 +75,16 @@ function Talents() {
           </MaskText>
         </p>
         <ul className={styles.list}>
-          {ARTISTS.map((artist, index) => (
+          {ARTISTS_LIST.slice(0, 4).map((artist, index) => (
             <li className={styles.item} key={artist.id}>
-              <MaskText stagger={index}>
+              <MaskText stagger={index} className={styles.itemMask}>
                 <p className={styles.imageWrapper}>
                   <img
                     src={artist.photo}
                     alt={artist.name}
                     className={styles.photo}
                   />
+                  <p className={styles.name}>{artist.name}</p>
                 </p>
                 <NavLink
                   to={`${ROUTES.artists}/${artist.name}`}

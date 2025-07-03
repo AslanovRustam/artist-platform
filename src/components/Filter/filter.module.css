@@ -1,0 +1,39 @@
+.container {
+  position: relative;
+}
+.wrapper {
+  background-color: var(--Yellow);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 52px;
+  height: 52px;
+  aspect-ratio: 1 / 1;
+  cursor: pointer;
+  transition: var(--transition);
+
+  &:hover,
+  &:focus {
+    background-color: var(--White);
+  }
+}
+.dropDownContainer {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  margin-top: 20px;
+  padding: 20px;
+  /* width: 100%; */
+  /* overflow-y: scroll; */
+  /* overflow: hidden; */
+  border-radius: 40px;
+  background: var(--Grey-BG-2);
+  z-index: 2;
+  transition: var(--transition);
+  font-family: Gotham-Book;
+}
+.icon {
+  width: 16px;
+  height: 18px;
+}

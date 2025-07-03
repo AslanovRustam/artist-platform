@@ -11,10 +11,33 @@ import User from "../assets/icons/user.svg?react";
 import Link from "../assets/icons/link.svg?react";
 import Epk from "../assets/icons/epk.svg?react";
 
+import Specs from "../assets/icons/specs.svg?react";
+import Documents from "../assets/icons/documents.svg?react";
+import Photos from "../assets/icons/photos.svg?react";
+
 import Star from "../assets/icons/star.svg?react";
 import Circle from "../assets/icons/ball.svg?react";
 import HalfCircle from "../assets/icons/halfCircle.svg?react";
 import Corner from "../assets/icons/corner.svg?react";
+import important from "../assets/images/important.png";
+import performance from "../assets/images/performance.png";
+import docs from "../assets/images/docs.png";
+
+import photo1 from "../assets/images/artists/list/1.png";
+import photo2 from "../assets/images/artists/list/2.png";
+import photo3 from "../assets/images/artists/list/3.png";
+import photo4 from "../assets/images/artists/list/4.png";
+import photo5 from "../assets/images/artists/list/5.png";
+import photo6 from "../assets/images/artists/list/6.png";
+import photo7 from "../assets/images/artists/list/7.png";
+import photo8 from "../assets/images/artists/list/8.png";
+import photo9 from "../assets/images/artists/list/9.png";
+import photo10 from "../assets/images/artists/list/10.png";
+import photo11 from "../assets/images/artists/list/11.png";
+import photo12 from "../assets/images/artists/list/12.png";
+import photo13 from "../assets/images/artists/list/13.png";
+import photo14 from "../assets/images/artists/list/14.png";
+import photo15 from "../assets/images/artists/list/15.png";
 
 export const ROUTES = {
   home: "/",
@@ -40,6 +63,25 @@ export const LOCATIONS = [
   "ELECTRONIC",
   "REGGAE",
   "EDM",
+];
+
+export const GENRE = [
+  "ELECTRONIC",
+  "JAZZ",
+  "POP",
+  "ROCK",
+  "AFROBEAT",
+  "HIP HOP",
+  "CLASSICAL",
+  "REGGAE",
+  "WORLD MUSIC",
+  "BLUES",
+  "INDIE",
+  "LATIN",
+  "R&B",
+  "TECHNO",
+  "EDM",
+  "FOLK",
 ];
 
 export const BUDGET = ["100 - 200", "200 - 500", "600 - 1000", "1000 - 2000"];
@@ -83,6 +125,123 @@ export const ARTIST_REGISTRATION_STEPS = [
   },
   { id: 1, Icon: Link, title: "Links", description: "Get in Touch" },
   { id: 2, Icon: Epk, title: "EPK", description: "Upload your press kit" },
+];
+
+export const PROFILE_STEPS = [
+  {
+    id: 0,
+    Icon: User,
+    title: "Basic Info",
+    description: "Tell us about yourself",
+    information: {
+      logo: important,
+      title: "Important Information",
+      list1: {
+        title: "",
+        items: [
+          "Each crew member must have valid travel documentation",
+          "Ensure all passports are valid for at least 6 months from travel date",
+          "Include any necessary work permits or visas",
+          "Contact details should be accessible for all crew members",
+          "Upload all documents in a single batch for easier processing",
+        ],
+      },
+    },
+  },
+  {
+    id: 1,
+    Icon: Specs,
+    title: "Specs",
+    description: "Show format & preferences",
+    information: {
+      logo: performance,
+      title: "Performance Information Guidelines",
+      list1: {
+        title: "",
+        items: [
+          "Live show format helps venues understand your performance setup",
+          "Genre selection helps with categorization and discovery",
+          "Event calendar display increases your visibility on the platform",
+          "Your average rate helps venues understand your pricing range",
+          "Independent artists can skip the record label information",
+        ],
+      },
+    },
+  },
+  {
+    id: 2,
+    Icon: Documents,
+    title: "Documents",
+    description: "Upload requirements",
+    information: {
+      logo: docs,
+      title: "Performance Information Guidelines",
+      list1: {
+        title: "Technical Rider",
+        items: [
+          "Stage requirements and dimensions",
+          "Sound and lighting equipment needs",
+          "Power requirements and setup time",
+          "Any special technical considerations",
+        ],
+      },
+      list2: {
+        title: "Hospitality Rider",
+        items: [
+          "Accommodation requirements",
+          "Catering and dietary needs",
+          "Transportation arrangements",
+          "Green room and backstage needs",
+        ],
+      },
+      details: {
+        title: "Passport Scans",
+        info: "Upload clear, readable scans of passports for all performers. This is essential for visa processing and international travel arrangements.",
+      },
+    },
+  },
+  {
+    id: 3,
+    Icon: Photos,
+    title: "Photos",
+    description: "Show your best side",
+    information: {
+      logo: docs,
+      title: "Photo Guidelines & Best Practices",
+      list1: {
+        title: "Profile Photo",
+        items: [
+          "High-quality, well-lit photo",
+          "Clear view of artist/band",
+          "Professional appearance",
+          "Used in search results",
+        ],
+      },
+      list2: {
+        title: "Cover Photo",
+        items: [
+          "Performance or promotional image",
+          "Showcases your style and brand",
+          "High resolution for best quality",
+          "Featured on your profile",
+        ],
+      },
+      list3: {
+        title: "Marketing Materials",
+        items: [
+          "3-5 high-resolution images",
+          "Performance shots preferred",
+          "Used for promotional materials",
+          "Venues use for marketing",
+        ],
+      },
+      tip: {
+        green: "Pro tip:",
+        normal:
+          " Great photos significantly increase your chances of getting booked. Consider hiring a professional photographer for the best results.",
+      },
+    },
+  },
 ];
 
 export const TOURS = [
@@ -179,5 +338,113 @@ export const TESTIMONIALS = [
     author: "Ahmed Al Mansouri3",
     client: "Corporate Gala",
     text: "“Sarah created the  amet consectetur. Convallis tincidunt id placerat pretium tristique eget. Id eu ut nunc velit egestas quis tempor nisi sagittis. Morbi cras leo fringilla lacinia ornare a. Sodales amet et pellentesque dui mauris malesuada scelerisque aliquet ornare.”",
+  },
+];
+
+export const ARTISTS_LIST = [
+  {
+    id: 0,
+    photo: photo1,
+    name: "DJ Khalil",
+    genre: "WORLD MUSIC",
+    variants: ["Dj Set", "Live Mix"],
+  },
+  {
+    id: 1,
+    photo: photo2,
+    name: "Nadia Pop",
+    genre: "POP",
+    variants: ["Live Band", "Live Mix"],
+  },
+  {
+    id: 2,
+    photo: photo3,
+    name: "Bass Collective",
+    genre: "HIP HOP",
+    variants: ["String Quartet", "Live Mix", "Live Mix"],
+  },
+  {
+    id: 3,
+    photo: photo4,
+    name: "Electric Dreams",
+    genre: "ELECTRONIC",
+    variants: ["Dj Set", "Live Mix"],
+  },
+  {
+    id: 4,
+    photo: photo5,
+    name: "Maya Reggae",
+    genre: "REGGAE",
+    variants: ["String Quartet", "Live Mix", "Live Mix"],
+  },
+  {
+    id: 5,
+    photo: photo6,
+    name: "Bass Drop Collective",
+    genre: "EDM",
+    variants: ["Dj Set", "Live Mix"],
+  },
+  {
+    id: 6,
+    photo: photo7,
+    name: "DJ Khalil",
+    genre: "WORLD MUSIC",
+    variants: ["Dj Set", "Live Mix"],
+  },
+  {
+    id: 7,
+    photo: photo8,
+    name: "Zara Folk",
+    genre: "FOLK",
+    variants: ["Piano Solo", "Live Mix"],
+  },
+  {
+    id: 8,
+    photo: photo9,
+    name: "Tribal Beats",
+    genre: "BLUES",
+    variants: ["Dj Set", "Live Mix"],
+  },
+  {
+    id: 9,
+    photo: photo10,
+    name: "Sara TECHNO ",
+    genre: "TECHNO",
+    variants: ["Dj Set", "Live Mix"],
+  },
+  {
+    id: 10,
+    photo: photo11,
+    name: "Mariia",
+    genre: "EDM",
+    variants: ["Dj Set", "Live Mix"],
+  },
+  {
+    id: 11,
+    photo: photo12,
+    name: "DJ Khalil",
+    genre: "JAZZ",
+    variants: ["Live Band", "Live Mix", "Live Band", "Live Mix", "Live Mix"],
+  },
+  {
+    id: 12,
+    photo: photo13,
+    name: "Desert Blues",
+    genre: "BLUES",
+    variants: ["Solo Acoustic", "Live Mix", "Live Mix"],
+  },
+  {
+    id: 13,
+    photo: photo14,
+    name: "DJ Khalil",
+    genre: "HIP HOP",
+    variants: ["Piano Solo", "Live Mix"],
+  },
+  {
+    id: 14,
+    photo: photo15,
+    name: "Luna Indie",
+    genre: "INDIE",
+    variants: ["String Quartet", "Live Mix"],
   },
 ];

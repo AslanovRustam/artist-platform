@@ -23,7 +23,7 @@ function Tours() {
         </MaskText>
         <ul className={styles.list}>
           {TOURS.map((tour, index) => (
-            <MaskText stagger={index} key={tour.id}>
+            <MaskText stagger={index} key={tour.id} className={styles.itemMask}>
               <li className={styles.item}>
                 <img
                   src={tour.photo}

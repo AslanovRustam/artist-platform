@@ -15,6 +15,9 @@
   background: var(--Dark-Grey);
   box-shadow: 4px 4px 0px 0px var(--Purple);
 }
+.itemMask {
+  /* box-shadow: 4px 4px 0px 0px var(--Purple); */
+}
 .image {
   width: 100%;
 }

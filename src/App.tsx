@@ -5,6 +5,7 @@ const Home = lazy(() => import("./pages/Home/Home"));
 const SingleArtistPage = lazy(
   () => import("./pages/singleArtist/SingleArtistPage")
 );
+const ArtistPage = lazy(() => import("./pages/Artist/Artist"));
 // Layout
 import Layout from "./components/Layout/Layout";
 // Utils
@@ -15,6 +16,7 @@ function App() {
     <Routes>
       <Route path={ROUTES.home} element={<Layout />}>
         <Route index element={<Home />} />
+        <Route path={ROUTES.artists} element={<ArtistPage />} />
         <Route
           path={`${ROUTES.artists}/:artistName`}
           element={<SingleArtistPage />}

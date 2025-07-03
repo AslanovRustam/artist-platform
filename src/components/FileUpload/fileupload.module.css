@@ -38,9 +38,11 @@
   line-height: 32px;
   margin-bottom: 8px;
 }
-.subTitle {
-  color: var(--Light-Grey);
-  text-align: center;
-  font-size: 14px;
-  line-height: 20px;
+@media (orientation: portrait) {
+  .title {
+    font-size: 20px;
+  }
+  .dropzone {
+    padding: 16px;
+  }
 }

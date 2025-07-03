@@ -2,6 +2,7 @@ import {
   useCallback,
   useState,
   type Dispatch,
+  type ReactNode,
   type SetStateAction,
 } from "react";
 import { useDropzone } from "react-dropzone";
@@ -11,9 +12,16 @@ import styles from "./fileupload.module.css";
 interface IProps {
   file: File | null;
   setFile: Dispatch<SetStateAction<File | null>>;
+  title?: string;
+  children?: ReactNode;
 }
 
-export default function FileUpload({ file, setFile }: IProps) {
+export default function FileUpload({
+  file,
+  setFile,
+  title = "Click to upload your EPK",
+  children,
+}: IProps) {
   const [error, setError] = useState<string | null>(null);
 
   const onDrop = useCallback((acceptedFiles: File[]) => {
@@ -66,10 +74,8 @@ export default function FileUpload({ file, setFile }: IProps) {
         ) : (
           <>
             <Upload className={styles.icon} />
-            <p className={styles.title}>Click to upload your EPK</p>
-            <p className={styles.subTitle}>
-              PDF, DOC, or DOCX files up to 10MB
-            </p>
+            <p className={styles.title}>{title}</p>
+            {children}
           </>
         )}
       </div>

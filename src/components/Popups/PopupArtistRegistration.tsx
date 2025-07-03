@@ -187,7 +187,11 @@ export default function PopupArtistRegistration({ onClose }: Props) {
       case 2:
         return (
           <>
-            <FileUpload file={file} setFile={setFile} />
+            <FileUpload file={file} setFile={setFile}>
+              <p className={styles.subTitle}>
+                PDF, DOC, or DOCX files up to 10MB
+              </p>
+            </FileUpload>
             <div className={styles.fileListContainer}>
               <p className={styles.fileListTitle}>
                 What to include in your EPK:

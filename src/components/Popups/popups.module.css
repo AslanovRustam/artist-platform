@@ -7,6 +7,9 @@
   padding: 24px;
   flex-direction: column;
 }
+.profileContainer {
+  max-width: 684px;
+}
 .container {
   width: 100%;
   box-sizing: border-box;
@@ -34,10 +37,10 @@
   height: 24px;
   cursor: pointer;
 }
-.form {
+.form,
+.formColumn {
   display: flex;
   padding: 24px 20px;
-  /* flex-direction: column; */
   align-items: center;
   flex-wrap: wrap;
   gap: 16px;
@@ -46,12 +49,40 @@
   border: 0.8px solid rgba(110, 118, 132, 0.2);
   background: var(--Grey-BG);
 }
+.formColumn {
+  flex-direction: column;
+  align-items: normal;
+}
+.fieldset {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  align-self: stretch;
+  width: 100%;
+}
+.crewSet {
+  color: var(--White);
+  font-family: Gotham-Book;
+  font-size: 18px;
+  line-height: 24px;
+  margin: 16px 0;
+}
+.inputGroup {
+  display: flex;
+  gap: 16px;
+}
 .icon {
   width: 24px;
   height: 24px;
 }
 .containerWidth {
   width: 248px !important;
+}
+.containerWidth289 {
+  width: 289px !important;
+}
+.containerWidthFull {
+  width: 100% !important;
 }
 .labelBooking {
   color: var(--White) !important;
@@ -62,11 +93,12 @@
 .selectBooking,
 .selectBookingTextArea,
 .inputArtist,
-.inputArtistTextArea {
+.inputArtistTextArea,
+.selectProfile {
   border-color: transparent !important;
   border-radius: 0 !important;
   font-size: 14px !important;
-  width: 100%;
+  width: 100% !important;
 }
 .selectBookingTextArea,
 .inputArtistTextArea {
@@ -85,7 +117,8 @@
   gap: 8.5px;
   margin-top: 12px;
 }
-.stepsItem {
+.stepsItem,
+.stepsItemProfile {
   position: relative;
   display: flex;
   flex-direction: column;
@@ -104,6 +137,26 @@
 .stepsItem:nth-child(2)::after {
   right: -76px;
 }
+.stepsItemProfile:not(:last-child)::after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 40px;
+  height: 1px;
+  background-color: var(--Light-Grey);
+  top: 24px;
+}
+.stepsItemProfile:nth-child(1)::after {
+  right: -32px;
+}
+
+.stepsItemProfile:nth-child(2)::after {
+  right: -16px;
+}
+.stepsItemProfile:nth-child(3)::after {
+  right: -22px;
+}
+
 .iconContainer {
   width: 48px;
   height: 48px;
@@ -238,6 +291,86 @@
   line-height: 20px;
   list-style: disc;
 }
+.item span {
+  color: var(--Yellow);
+}
+.addButton {
+  color: var(--Light-Grey);
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 24px;
+  padding: 12px 24px;
+  border: 0.8px solid var(--Light-Grey);
+  border-radius: 999px;
+  cursor: pointer;
+  transition: var(--transition);
+
+  &:hover,
+  &:focus {
+    border-color: var(--Yellow);
+    color: var(--Yellow);
+  }
+}
+
+.selectProfile {
+  padding: 10px 48px 10px 16px !important;
+}
+
+.subTitle {
+  color: var(--Light-Grey);
+  text-align: center;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.uploadDescription {
+  text-align: center;
+  font-family: Gotham-Book;
+  font-size: 16px;
+  line-height: 20px;
+}
+.uploadInfo1,
+.uploadInfo2 {
+  color: var(--Light-Grey);
+  text-align: center;
+  font-family: Gotham-Book;
+  font-size: 14px;
+  line-height: 20px;
+}
+.uploadInfo1 {
+  margin: 8px 0 2px;
+}
+.flex {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex: 1 1 0;
+}
+.spaceBetween {
+  justify-content: space-between;
+}
+.travelTitle {
+  color: var(--Yellow);
+  font-family: Gotham-Book;
+  font-size: 20px;
+  line-height: 24px;
+}
+.profileListTitle {
+  color: var(--White);
+  font-family: Gotham-Book;
+  font-size: 16px;
+  line-height: 20px;
+  margin-bottom: 16px;
+}
+.devider {
+  width: 100%;
+  height: 1px;
+  background-color: var(--Light-Grey);
+  margin: 20px 0;
+}
+.m0 {
+  margin: 0;
+}
 @media (orientation: portrait) {
   .container {
     height: 100% !important;
@@ -254,6 +387,10 @@
   }
 
   .containerWidthTextArea {
+    width: 100% !important;
+  }
+
+  .containerWidth289 {
     width: 100% !important;
   }
   .container {
@@ -275,5 +412,25 @@
   }
   .rightBtnContainer {
     gap: 2px;
+  }
+  .inputGroup,
+  .fieldset {
+    flex-direction: column;
+  }
+  .stepsList {
+    align-items: normal;
+  }
+  .stepsItemProfile:not(:last-child)::after {
+    width: 24px;
+  }
+  .stepsItemProfile:nth-child(1)::after {
+    right: -22px;
+  }
+
+  .stepsItemProfile:nth-child(2)::after {
+    right: -16px;
+  }
+  .stepsItemProfile:nth-child(3)::after {
+    right: -11px;
   }
 }

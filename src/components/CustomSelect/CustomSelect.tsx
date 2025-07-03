@@ -28,7 +28,7 @@ export default function CustomSelect({
   classNameSelect,
   icon,
 }: Props) {
-  const [isOpen, setIsOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState<boolean>(false);
   const ref = useRef<HTMLDivElement>(null);
 
   const handleSelect = (option: string) => {

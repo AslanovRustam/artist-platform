@@ -69,6 +69,7 @@
   box-sizing: border-box;
   border: none;
   outline: none;
+  /* border: 1px solid red; */
 }
 
 body {
@@ -113,20 +114,20 @@ button {
 }
 
 .swiper-pagination-bullet {
-  width: 20px;
-  height: 20px;
-  background-color: transparent;
-  background-image: url(./assets/images/paginationDefault.png);
+  width: 20px !important;
+  height: 20px !important;
+  background-color: transparent !important;
+  background-image: url(./assets/images/paginationDefault.png) !important;
 }
 .swiper-pagination-bullet-active {
-  background-image: url(./assets/images/paginationActive.png);
+  background-image: url(./assets/images/paginationActive.png) !important;
 }
 .swiper-pagination-bullets {
-  position: sticky;
-  margin-top: 64px;
+  position: sticky !important;
+  margin-top: 64px !important;
 }
 @media (orientation: portrait) {
   .swiper-pagination-bullets {
-    margin-top: 40px;
+    margin-top: 40px !important;
   }
 }

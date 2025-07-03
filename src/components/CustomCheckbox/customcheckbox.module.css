@@ -4,6 +4,7 @@
   flex-direction: row;
   align-items: end;
   cursor: pointer;
+  font-size: 17px;
 }
 
 .customCheckbox {
