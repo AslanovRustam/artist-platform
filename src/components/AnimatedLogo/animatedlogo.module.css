@@ -30,6 +30,7 @@
   width: 79px;
   height: 33px;
   transition: var(--transition);
+  color: var(--Orange);
 }
 @media (orientation: portrait) {
   .wrapper {

@@ -126,8 +126,12 @@ button {
   position: sticky !important;
   margin-top: 64px !important;
 }
+
 @media (orientation: portrait) {
   .swiper-pagination-bullets {
     margin-top: 40px !important;
+  }
+  .react-responsive-modal-container {
+    overflow-y: hidden;
   }
 }

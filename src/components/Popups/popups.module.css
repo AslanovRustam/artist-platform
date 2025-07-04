@@ -420,17 +420,14 @@
   .stepsList {
     align-items: normal;
   }
-  .stepsItemProfile:not(:last-child)::after {
-    width: 24px;
+  .stepsItemProfile::after {
+    display: none !important;
   }
-  .stepsItemProfile:nth-child(1)::after {
-    right: -22px;
+  .stepDescription {
+    display: none;
   }
-
-  .stepsItemProfile:nth-child(2)::after {
-    right: -16px;
-  }
-  .stepsItemProfile:nth-child(3)::after {
-    right: -11px;
+  .stepContainer {
+    margin: 16px 0;
+    gap: 16px;
   }
 }
