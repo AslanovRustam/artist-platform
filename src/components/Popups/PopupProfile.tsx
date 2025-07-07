@@ -329,7 +329,6 @@ export default function PopupProfile({ onClose }: Props) {
         return null;
     }
   };
-  console.log("formData", formData);
 
   const renderStepAdditionalInfo = () => {
     switch (activeStep) {
@@ -552,7 +551,7 @@ export default function PopupProfile({ onClose }: Props) {
                 className={styles.button}
                 onClick={() => {
                   const form = document.getElementById(
-                    "artist-registration-form"
+                    "profile-form"
                   ) as HTMLFormElement;
                   form?.requestSubmit();
                 }}

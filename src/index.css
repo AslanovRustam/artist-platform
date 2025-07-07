@@ -127,11 +127,23 @@ button {
   margin-top: 64px !important;
 }
 
+.ReactModal__Overlay--after-open {
+  z-index: 2;
+  overflow-y: scroll;
+}
+.ReactModal__Content .ReactModal__Content--after-open {
+  transform: unset !important;
+  inset: unset !important;
+}
+
 @media (orientation: portrait) {
   .swiper-pagination-bullets {
     margin-top: 40px !important;
   }
   .react-responsive-modal-container {
     /* overflow: hidden; */
+  }
+  .ReactModal__Overlay--after-open {
+    overflow-y: unset;
   }
 }

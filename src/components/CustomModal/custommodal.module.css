@@ -22,3 +22,16 @@
 .overvlow {
   overflow: hidden;
 }
+.closeIcon {
+  position: absolute;
+  right: 24px;
+  top: 24px;
+  z-index: 2;
+  cursor: pointer;
+}
+@media (orientation: portrait) {
+  .closeIcon {
+    right: 12px;
+    top: 12px;
+  }
+}
