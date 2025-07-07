@@ -58,6 +58,11 @@ function Filter({
     handleFilterChange(String(val.to), "budget.to");
   };
 
+  const handleSubmit = () => {
+    togglePopup();
+    submit();
+  };
+
   useEffect(() => {
     document.addEventListener("mousedown", handleClickOutside);
     return () => document.removeEventListener("mousedown", handleClickOutside);
@@ -107,7 +112,7 @@ function Filter({
               className="white"
               onClick={clear}
             />
-            <Button text="Apply" fullWidthAll onClick={submit} />
+            <Button text="Apply" fullWidthAll onClick={handleSubmit} />
           </div>
         </div>
       )}

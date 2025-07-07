@@ -132,6 +132,6 @@ button {
     margin-top: 40px !important;
   }
   .react-responsive-modal-container {
-    overflow-y: hidden;
+    /* overflow: hidden; */
   }
 }
