@@ -1,10 +1,16 @@
-import styles from "./filter.module.css";
-import FilterIcon from "../../assets/icons/filter.svg?react";
 import { useEffect, useRef, useState } from "react";
+// Componetns
 import CustomSelectWithCheckbox from "../CustomSelect/CustomSelectWithCheckbox";
-import type { ICheckbox } from "../../types/types";
-// import Budget from "../../assets/icons/budget.svg?react";
+import RangeSlider from "../Range/Range";
+import Button from "../Button/Button";
+// Images
+import FilterIcon from "../../assets/icons/filter.svg?react";
 import Location from "../../assets/icons/location.svg?react";
+import Genre from "../../assets/icons/genre.svg?react";
+// Utils
+import type { ICheckbox } from "../../types/types";
+// Styles
+import styles from "./filter.module.css";
 
 type Props = {
   formData: {
@@ -15,14 +21,18 @@ type Props = {
   handleFilterChange: (value: string | ICheckbox[], name: string) => void;
   optionsLocation: string[];
   optionsGenre: string[];
+  clear: () => void;
+  submit: () => void;
 };
 
 function Filter({
   formData,
   handleFilterChange,
   optionsLocation,
-}: // optionsGenre,
-Props) {
+  optionsGenre,
+  clear,
+  submit,
+}: Props) {
   const [isOpen, setIsOpen] = useState<boolean>(false);
   const wrapperRef = useRef<HTMLDivElement>(null);
   const popupRef = useRef<HTMLDivElement>(null);
@@ -41,6 +51,11 @@ Props) {
     ) {
       setIsOpen(false);
     }
+  };
+
+  const handleRangeChange = (val: { from: number; to: number }) => {
+    handleFilterChange(String(val.from), "budget.from");
+    handleFilterChange(String(val.to), "budget.to");
   };
 
   useEffect(() => {
@@ -62,7 +77,38 @@ Props) {
             onChange={handleFilterChange}
             options={optionsLocation}
             icon={<Location className={styles.icon} />}
+            className={styles.fullWidth}
+            classNameSelect={styles.fullWidth}
           />
+          <RangeSlider
+            min={0}
+            max={20000}
+            step={100}
+            value={{
+              from: Number(formData.budget.from) || 0,
+              to: Number(formData.budget.to) || 0,
+            }}
+            onChange={handleRangeChange}
+          />
+          <CustomSelectWithCheckbox
+            label="Genre"
+            name="genre"
+            value={formData.genre}
+            onChange={handleFilterChange}
+            options={optionsGenre}
+            icon={<Genre className={styles.icon} />}
+            className={styles.fullWidth}
+            classNameSelect={styles.fullWidth}
+          />
+          <div className={styles.buttonContainer}>
+            <Button
+              text="Clear all"
+              fullWidthAll
+              className="white"
+              onClick={clear}
+            />
+            <Button text="Apply" fullWidthAll onClick={submit} />
+          </div>
         </div>
       )}
     </div>

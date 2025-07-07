@@ -8,7 +8,7 @@ import CustomSelect from "../CustomSelect/CustomSelect";
 import CustomSelectWithCheckbox from "../CustomSelect/CustomSelectWithCheckbox";
 import { MaskText } from "../AnimatedText/MaskText";
 // Utils
-import { BUDGET, LOCATIONS } from "../../utils/constants";
+import { BUDGET, LOCATIONS, ROUTES } from "../../utils/constants";
 // Types
 import type { ICheckbox } from "../../types/types";
 // Images
@@ -18,8 +18,10 @@ import Location from "../../assets/icons/location.svg?react";
 // import Decor from "../../assets/icons/decorLeft.svg?react";
 // Styles
 import styles from "./brief.module.css";
+import { useNavigate } from "react-router";
 
 export default function Brief() {
+  const navigate = useNavigate();
   const initialLocations: ICheckbox[] = LOCATIONS.map((loc) => ({
     name: loc,
     checked: false,
@@ -95,7 +97,12 @@ export default function Brief() {
             icon={<Location className={styles.icon} />}
           />
 
-          <Button text="Search" className="brief" fullWidth />
+          <Button
+            text="Search"
+            className="brief"
+            fullWidth
+            onClick={() => navigate(ROUTES.artists)}
+          />
         </form>
       </div>
       {/* <div className={styles.triangleAnimation}> */}

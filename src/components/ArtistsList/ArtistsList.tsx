@@ -1,15 +1,40 @@
 import { NavLink } from "react-router";
-import { ARTISTS_LIST, ROUTES } from "../../utils/constants";
+import { ROUTES } from "../../utils/constants";
 import styles from "./artistslist.module.css";
 import { MaskText } from "../AnimatedText/MaskText";
+import { useEffect, useState } from "react";
+import Button from "../Button/Button";
 
-type Props = {};
+type Props = {
+  artistList: {
+    id: number;
+    photo: string;
+    name: string;
+    genre: string;
+    variants: string[];
+  }[];
+};
 
-function ArtistsList({}: Props) {
+function ArtistsList({ artistList }: Props) {
+  const [showAll, setShowAll] = useState(false);
+
+  const toggleShowMoreBtn = () => {
+    setShowAll(!showAll);
+  };
+
+  const visibleArtists = showAll ? artistList : artistList.slice(0, 6);
+
+  useEffect(() => {
+    const isDesktop = window.innerWidth >= 1024;
+    if (isDesktop) {
+      setShowAll(true);
+    }
+  }, []);
+
   return (
     <div className={styles.container}>
       <ul className={styles.list}>
-        {ARTISTS_LIST.map((artist, index) => (
+        {visibleArtists.map((artist, index) => (
           <MaskText
             stagger={index * 0.2}
             className={styles.itemMask}
@@ -56,6 +81,13 @@ function ArtistsList({}: Props) {
           </MaskText>
         ))}
       </ul>
+      {!showAll && artistList.length > 6 && (
+        <Button
+          text="Show more"
+          className="artistsShow"
+          onClick={toggleShowMoreBtn}
+        />
+      )}
     </div>
   );
 }

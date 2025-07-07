@@ -240,7 +240,7 @@ export default function PopupArtistRegistration({ onClose }: Props) {
                 <Icon className={styles.iconSteps} />
               </div>
               <p className={styles.stepTitle}>{title}</p>
-              <p className={styles.stepDescription}>{description}</p>
+              <p className={styles.stepDescriptionReg}>{description}</p>
             </li>
           )
         )}

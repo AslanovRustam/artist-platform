@@ -10,7 +10,7 @@
   grid-gap: 20px;
 }
 .item {
-  width: 426px;
+  min-width: 426px;
   height: 428px;
   background-repeat: no-repeat;
   background-size: cover;
@@ -104,6 +104,7 @@
     width: auto;
     height: 343px;
     padding: 12px;
+    min-width: unset;
   }
   .verified {
     font-size: 16px;

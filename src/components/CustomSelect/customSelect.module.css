@@ -21,6 +21,10 @@
   color: var(--Grey-Icon);
   transition: var(--transition);
 }
+.icon svg {
+  width: 24px;
+  height: 24px;
+}
 
 .selectBox {
   position: relative;
@@ -108,6 +112,7 @@
 .selectedOption {
   color: var(--Yellow);
 }
+
 @media (orientation: portrait) {
   .wrapper {
     width: 100%;

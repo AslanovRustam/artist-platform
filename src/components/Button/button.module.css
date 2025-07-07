@@ -44,6 +44,14 @@
     background-color: var(--Yellow);
   }
 }
+.white {
+  background-color: var(--White);
+
+  &:hover,
+  &:focus {
+    background-color: var(--Yellow);
+  }
+}
 
 .icon {
   transition: var(--transition);
@@ -122,6 +130,16 @@
     padding-top: 12px;
     padding-bottom: 14px;
   }
+  .artistsShow {
+    width: 100%;
+    padding-top: 12px;
+    padding-bottom: 14px;
+    margin-top: 20px;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 24px;
+    text-transform: uppercase;
+  }
   .buttonIcon {
     font-size: 18px;
     line-height: 22px;
@@ -143,5 +161,8 @@
     font-weight: 700;
     line-height: 22px;
     padding: 13px 48px 13px 48px;
+  }
+  .artistPageBlack {
+    width: 100%;
   }
 }

@@ -1,4 +1,4 @@
-import type { ReactNode } from "react";
+import { useEffect, type ReactNode } from "react";
 import Modal from "react-responsive-modal";
 import styles from "./custommodal.module.css";
 import "react-responsive-modal/styles.css";
@@ -37,6 +37,14 @@ function CustomModal({ children, open, onClose }: Props) {
       </defs>
     </svg>
   );
+
+  useEffect(() => {
+    if (open) {
+      document.body.classList.add(styles.overvlow);
+      return;
+    }
+    document.body.classList.remove(styles.overvlow);
+  }, [open]);
   return (
     <Modal
       open={open}

@@ -1,14 +1,31 @@
-import { NavLink } from "react-router";
+import { NavLink, useLocation, useNavigate } from "react-router";
+// Components
+import BouncingBallFooter from "../BouncingBall/BouncingBallFooter";
+import TriangleAnimation from "../TriangleAnimation/TriangleAnimation";
 //Images
 import AnimatedLogo from "../AnimatedLogo/AnimatedLogo";
 //Utils
 import { ANCHORS, ROUTES } from "../../utils/constants";
 //Styles
 import styles from "./footer.module.css";
-import BouncingBallFooter from "../BouncingBall/BouncingBallFooter";
-import TriangleAnimation from "../TriangleAnimation/TriangleAnimation";
 
 function Footer() {
+  const location = useLocation();
+  const navigate = useNavigate();
+
+  const handleAnchorClick = (hash: string) => {
+    if (location.pathname === "/") {
+      console.log("Scrolling to anchor:", hash);
+
+      const target = document.querySelector(hash);
+      if (target) {
+        target.scrollIntoView({ behavior: "smooth" });
+      }
+    } else {
+      console.log("navigate to anchor:", hash);
+      navigate(`/${hash}`);
+    }
+  };
   return (
     <footer className={styles.footer}>
       <NavLink to={ROUTES.home} className={styles.logoContainer}>
@@ -18,10 +35,17 @@ function Footer() {
       <nav className={styles.navPanel}>
         <ul className={styles.list}>
           <li className={styles.item}>
-            <a href={ANCHORS.artists.anchor}>Artists</a>
+            <button onClick={() => handleAnchorClick(ANCHORS.artists.anchor)}>
+              Artists
+            </button>
           </li>
           <li className={styles.item}>
-            <a href={ANCHORS.howItWorks.anchor}>How it works</a>
+            <button
+              onClick={() => handleAnchorClick(ANCHORS.howItWorks.anchor)}
+            >
+              How it works
+            </button>
+            {/* <a href={ANCHORS.howItWorks.anchor}>How it works</a> */}
           </li>
           <li className={styles.item}>
             <a href={ANCHORS.howItWorks.anchor}>Contact</a>

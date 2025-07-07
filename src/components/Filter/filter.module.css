@@ -32,8 +32,28 @@
   z-index: 2;
   transition: var(--transition);
   font-family: Gotham-Book;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  max-width: 360px;
 }
 .icon {
   width: 16px;
   height: 18px;
+}
+.fullWidth {
+  width: 100%;
+  max-width: unset;
+}
+.buttonContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  margin-top: 28px;
+}
+@media (orientation: portrait) {
+  .dropDownContainer {
+    width: auto;
+  }
 }

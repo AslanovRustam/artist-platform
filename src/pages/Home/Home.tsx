@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import Booking from "../../components/Booking/Booking";
 import BookingGreen from "../../components/Booking/BookingGreen";
 import Brief from "../../components/Brief/Brief";
@@ -10,6 +11,10 @@ import Talents from "../../components/Talents/Talents";
 import styles from "./home.module.css";
 
 export default function Home() {
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }, []);
+
   return (
     <section className={styles.section}>
       <Hero />
