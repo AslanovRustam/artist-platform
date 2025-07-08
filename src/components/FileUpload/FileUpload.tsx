@@ -14,6 +14,7 @@ interface IProps {
   setFile: Dispatch<SetStateAction<File | null>>;
   title?: string;
   children?: ReactNode;
+  acceptTypes?: string[];
 }
 
 export default function FileUpload({
@@ -21,6 +22,14 @@ export default function FileUpload({
   setFile,
   title = "Click to upload your EPK",
   children,
+  acceptTypes = [
+    "application/pdf",
+    "application/msword",
+    "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+    "image/jpeg",
+    "image/png",
+    "image/webp",
+  ],
 }: IProps) {
   const [error, setError] = useState<string | null>(null);
 
@@ -29,16 +38,12 @@ export default function FileUpload({
 
     if (!uploadedFile) return;
 
-    const isValidType = [
-      "application/pdf",
-      "application/msword",
-      "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
-    ].includes(uploadedFile.type);
+    const isValidType = acceptTypes.includes(uploadedFile.type);
 
     const isValidSize = uploadedFile.size <= 10 * 1024 * 1024;
 
     if (!isValidType) {
-      setError("Only PDF, DOC, DOCX files are allowed.");
+      setError("Unsupported file type.");
       setFile(null);
       return;
     }
@@ -53,16 +58,26 @@ export default function FileUpload({
     setFile(uploadedFile);
   }, []);
 
-  const { getRootProps, getInputProps } = useDropzone({
-    onDrop,
-    multiple: false,
-    accept: {
+  const dropzoneAccept = acceptTypes.reduce((acc, type) => {
+    const ext = {
       "application/pdf": [".pdf"],
       "application/msword": [".doc"],
       "application/vnd.openxmlformats-officedocument.wordprocessingml.document":
         [".docx"],
-    },
-    maxSize: 10 * 1024 * 1024, // 10 MB
+      "image/jpeg": [".jpg", ".jpeg"],
+      "image/png": [".png"],
+      "image/webp": [".webp"],
+    }[type];
+
+    if (ext) acc[type] = ext;
+    return acc;
+  }, {} as Record<string, string[]>);
+
+  const { getRootProps, getInputProps } = useDropzone({
+    onDrop,
+    multiple: false,
+    accept: dropzoneAccept,
+    maxSize: 10 * 1024 * 1024,
   });
 
   return (

@@ -290,17 +290,19 @@ export default function PopupProfile({ onClose }: Props) {
                 file={fileProfilePhoto}
                 setFile={setFileProfilePhoto}
                 title="Profile Photos"
+                key="Profile Photos"
               >
                 <p className={styles.uploadDescription}>
                   Square format for profile
                 </p>
-                <p className={styles.uploadInfo1}>1000 x 1000 pixels</p>
+                <p className={styles.uploadInfo1}>1000 x 1000 pixels </p>
                 <p className={styles.uploadInfo2}>JPG, PNG, WebP - Max 10MB</p>
               </FileUpload>
               <FileUpload
                 file={fileCoverPhoto}
                 setFile={setFileCoverPhoto}
                 title="Cover Photo"
+                key="Cover Photo"
               >
                 <p className={styles.uploadDescription}>
                   Landscape format for cover
@@ -313,6 +315,7 @@ export default function PopupProfile({ onClose }: Props) {
               file={fileMaterials}
               setFile={setFileMaterials}
               title="Marketing Materials"
+              key="Marketing Materials"
             >
               <p className={styles.uploadDescription}>
                 Upload3-5 high-resolution images
