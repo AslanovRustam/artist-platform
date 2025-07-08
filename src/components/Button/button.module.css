@@ -1,13 +1,15 @@
 .button {
   padding: 8px 20px 10px;
+  /* padding: 0.42em 1.04em 0.52em; */
   background-color: var(--Yellow);
   color: var(--Grey-BG);
   transition: var(--transition);
   border-radius: 999px;
   color: #000;
-  font-size: 16px;
+  /* font-size: 16px; */
+  font-size: 0.833em;
   font-weight: 600;
-  line-height: 20px;
+  line-height: 125%;
   cursor: pointer;
   z-index: 1;
 
@@ -19,16 +21,20 @@
 
 .buttonIcon,
 .black {
-  padding: 19px 40px 21px 48px;
+  /* padding: 19px 40px 21px 48px; */
+  padding: 1em 2.08em 1.09em 2.5em;
   background: var(--White);
   display: flex;
   align-items: center;
-  gap: 8px;
+  /* gap: 8px; */
+  gap: 0.42em;
   transition: var(--transition);
   border-radius: 999px;
-  font-size: 20px;
   font-weight: 700;
-  line-height: 24px;
+  /* font-size: 20px;
+  line-height: 24px; */
+  font-size: 1.04em;
+  line-height: 120%;
   text-transform: uppercase;
   cursor: pointer;
   color: #000;
@@ -46,6 +52,8 @@
 }
 .white {
   background-color: var(--White);
+  /* padding: 8px 20px 10px; */
+  font-size: 1rem;
 
   &:hover,
   &:focus {
@@ -64,18 +72,23 @@
 }
 
 .brief {
-  font-size: 20px;
   font-style: normal;
   font-weight: 700;
-  line-height: 24px;
   text-transform: uppercase;
-  padding: 19px 48px 21px 48px;
+  /* font-size: 20px;
+  line-height: 24px;
+  padding: 19px 48px 21px 48px; */
+  font-size: 1.04em;
+  line-height: 120%;
+  padding: 1em 2.5em 1.09em 2.5em;
 }
 
 .artists {
-  font-size: 20px;
   font-weight: 700;
-  line-height: 24px;
+  /* font-size: 20px;
+  line-height: 24px; */
+  font-size: 1.04em;
+  line-height: 120%;
   text-transform: uppercase;
 }
 .black {
@@ -95,11 +108,14 @@
 
 .artistPage,
 .artistPageBlack {
-  font-size: 20px;
   font-weight: 500;
-  line-height: 24px;
   text-transform: uppercase;
-  padding: 19px 48px 21px;
+  /* font-size: 20px;
+  line-height: 24px;
+  padding: 19px 48px 21px; */
+  font-size: 1.04em;
+  line-height: 120%;
+  padding: 1em 2.5em 1.09em;
 }
 .artistPageBlack {
   background-color: var(--Grey-BG);
@@ -116,10 +132,13 @@
 }
 .tours {
   width: 100%;
-  font-size: 20px;
   font-weight: 500;
+  /* font-size: 20px;
   line-height: 24px;
-  padding: 19px 48px 21px;
+  padding: 19px 48px 21px; */
+  font-size: 1.04em;
+  line-height: 120%;
+  padding: 1em 2.5em 1.09em;
 }
 @media (orientation: portrait) {
   .fullWidth {
@@ -129,6 +148,8 @@
     width: 100%;
     padding-top: 12px;
     padding-bottom: 14px;
+    font-size: 20px;
+    line-height: 24px;
   }
   .artistsShow {
     width: 100%;
@@ -150,7 +171,8 @@
     line-height: 22px;
     padding: 20px 0 22px;
   }
-  .artistPage {
+  .artistPage,
+  .bookNow {
     font-size: 18px;
     font-weight: 700;
     line-height: 22px;
@@ -164,5 +186,10 @@
   }
   .artistPageBlack {
     width: 100%;
+    font-size: 16px;
+  }
+  .tours {
+    font-size: 4.8em;
+    padding: 1em 2.5em 1.09em;
   }
 }

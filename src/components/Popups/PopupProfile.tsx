@@ -144,6 +144,7 @@ export default function PopupProfile({ onClose }: Props) {
                     classNameSelect={styles.selectProfile}
                     placeholder="Select location"
                     className={styles.containerWidthFull}
+                    classNameOption={styles.option}
                   />
                   <CustomSelect
                     label="Nationality"
@@ -157,6 +158,7 @@ export default function PopupProfile({ onClose }: Props) {
                     classNameSelect={styles.selectProfile}
                     placeholder="Select Nationality"
                     className={styles.containerWidthFull}
+                    classNameOption={styles.option}
                   />
                 </div>
               </fieldset>

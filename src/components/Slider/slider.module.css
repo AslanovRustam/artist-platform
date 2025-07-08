@@ -3,6 +3,9 @@
   width: 100%;
   margin-top: 64px;
 }
+.tours {
+  display: none;
+}
 .slider {
   width: auto;
   max-width: 1330px;
@@ -86,6 +89,9 @@
   .container {
     margin-top: 40px;
   }
+  .tours {
+    display: block;
+  }
   .sliderItem {
     width: 100% !important;
   }
@@ -101,5 +107,37 @@
     font-size: 20px;
     font-weight: 400;
     line-height: 24px;
+  }
+  .item {
+    padding: 16px;
+    background: var(--Dark-Grey);
+    box-shadow: 4px 4px 0px 0px var(--Purple);
+  }
+
+  .image {
+    width: 100%;
+  }
+  .info {
+    margin: 0 0 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+  .place {
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 133%;
+  }
+  .date {
+    color: var(--Orange);
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 120%;
+    text-transform: uppercase;
+  }
+  .location {
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 120%;
   }
 }

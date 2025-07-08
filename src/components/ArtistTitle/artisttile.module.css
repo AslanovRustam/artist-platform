@@ -1,6 +1,6 @@
 .container {
   position: relative;
-  padding: 80px var(--padding-container-desktop);
+  padding: var(--padding-inner-80) var(--padding-container-desktop);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -9,15 +9,17 @@
 }
 .title {
   text-align: center;
-  font-size: 96px;
   font-weight: 700;
-  line-height: 110px;
+  /* font-size: 96px; */
+  font-size: 5em;
+  line-height: 114.6%;
   text-transform: uppercase;
 }
 .subTitle {
   color: var(--White);
-  font-size: 36px;
-  line-height: 48px;
+  /* font-size: 36px; */
+  line-height: 133%;
+  font-size: 1.875em;
   text-align: center;
 }
 @media (orientation: portrait) {

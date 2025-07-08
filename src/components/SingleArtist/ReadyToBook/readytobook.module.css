@@ -7,27 +7,31 @@
   background-color: var(--Yellow);
   overflow: hidden;
 }
-.title,
-.titleBlue {
+.title {
   color: var(--Grey-BG);
   text-align: center;
-  font-size: 80px;
-  line-height: 90px;
+  /* font-size: 80px; */
+  font-size: 4.167em;
+  line-height: 112.5%;
   text-transform: uppercase;
 }
 .title {
-  max-width: 900px;
+  /* max-width: 900px; */
   margin-bottom: 32px;
+  max-width: 46.875rem;
 }
 .titleBlue {
   color: var(--Blue);
 }
 .description {
+  position: relative;
   color: var(--Grey-BG);
   text-align: center;
-  font-size: 36px;
-  line-height: 48px;
+  font-size: 1.875em;
+  line-height: 133%;
   margin-bottom: 40px;
+  /* margin-bottom: 2.08rem; */
+  z-index: 1;
 }
 .triangleFirst {
   position: absolute;

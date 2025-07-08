@@ -8,6 +8,7 @@ import { useState } from "react";
 import CustomModal from "../../CustomModal/CustomModal";
 import PopupBooking from "../../Popups/PopupBooking";
 import { MaskText } from "../../AnimatedText/MaskText";
+import Slider from "../../Slider/Slider";
 
 function Tours() {
   const [isPopupOpen, setIsPopupOpen] = useState<boolean>(false);
@@ -44,6 +45,7 @@ function Tours() {
             </MaskText>
           ))}
         </ul>
+        <Slider tours={TOURS} onClick={togglePopup} />
       </div>
       <CustomModal open={isPopupOpen} onClose={togglePopup}>
         <PopupBooking onClose={togglePopup} />

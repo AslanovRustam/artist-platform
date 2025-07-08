@@ -1,6 +1,7 @@
 .bouncing {
   display: block;
-  width: 316px;
+  /* width: 316px; */
+  width: 16.45em;
 }
 
 .ball {

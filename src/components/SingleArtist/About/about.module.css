@@ -5,25 +5,27 @@
   justify-content: space-between;
 }
 .left {
-  max-width: 650px;
+  /* max-width: 650px; */
+  max-width: 33.85em;
 }
-.title,
-.titleGreen {
-  font-size: 80px;
-  line-height: 90px;
+.title {
+  /* font-size: 80px; */
+  font-size: 4.167em;
+  line-height: 112.5%;
   text-transform: uppercase;
 }
 .titleGreen {
   color: var(--Yellow);
 }
 .title {
-  margin-bottom: 64px;
+  /* margin-bottom: 64px; */
+  margin-bottom: 3.33rem;
 }
 .description1,
 .description2 {
   font-family: Gotham-Book;
-  font-size: 24px;
-  line-height: 32px;
+  font-size: 1.25em;
+  line-height: 133%;
 }
 .description1 {
   margin-bottom: 20px;
@@ -49,6 +51,9 @@
   .description2 {
     font-size: 20px;
     line-height: 28px;
+  }
+  .left {
+    max-width: unset;
   }
   .right {
     width: 134px;

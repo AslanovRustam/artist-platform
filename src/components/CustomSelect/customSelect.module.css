@@ -7,14 +7,17 @@
 
 .label {
   color: var(--Yellow);
-  font-size: 24px;
   font-weight: 700;
-  line-height: 32px;
+  /* font-size: 24px;
+  line-height: 32px; */
+  font-size: 1.33em;
+  line-height: 133%;
 }
 
 .icon {
   position: absolute;
-  left: 12px;
+  /* left: 12px; */
+  left: 0.625em;
   display: flex;
   align-items: center;
   pointer-events: none;
@@ -22,28 +25,38 @@
   transition: var(--transition);
 }
 .icon svg {
-  width: 24px;
-  height: 24px;
+  /* width: 1.25rem;
+  height: 1.25rem; */
+  width: 20px;
+  height: 19px;
 }
 
 .selectBox {
   position: relative;
-  width: 285px;
+  /* width: 285px; */
+  width: 14.84rem;
+  /* min-width: 100%; */
   /* width: 100%; */
   max-width: 285px;
   color: var(--White);
-  font-size: 18px;
-  line-height: 24px;
+  /* font-size: 18px;
+  line-height: 24px; */
+  font-size: 0.9375em;
+  line-height: 133%;
   border-radius: 999px;
   border: 0.5px solid var(--White);
   background: var(--Dark-Grey);
-  padding: 20px 48px 20px 40px;
+  /* padding: 20px 48px 20px 40px; */
+  padding: 1.04em 2.5em 1.04em 2.08em;
   transition: var(--transition);
   cursor: pointer;
   font-family: Gotham-Book;
+  display: flex;
+  align-items: flex-end;
 }
 .selectBoxWOIcon {
-  padding: 20px 48px 20px 16px;
+  /* padding: 20px 48px 20px 16px; */
+  padding: 1.04em 2.5em 1.04em 0.833em;
 }
 .arrow {
   position: absolute;
@@ -74,7 +87,7 @@
   top: 100%;
   left: 0;
   margin-top: 12px;
-  width: 100%;
+  min-width: 100%;
   overflow-y: scroll;
   border-radius: 20px;
   background: var(--Grey-BG-2);
@@ -96,10 +109,14 @@
 }
 .option {
   color: var(--White);
-  font-size: 18px;
+  /* font-size: 18px;
   line-height: 22px;
   padding: 6px 8px;
-  border-radius: 12px;
+  border-radius: 12px; */
+  font-size: 0.9375em;
+  line-height: 122%;
+  padding: 0.3125em 0.416em;
+  border-radius: 0.625em;
   transition: var(--transition);
   cursor: pointer;
 }
@@ -121,8 +138,24 @@
     width: 100%;
     max-width: unset;
     padding: 13px 48px 13px 40px;
+    font-size: 18px;
+    line-height: 24px;
   }
   .selectBoxWOIcon {
-    padding: 13px 48px 13px 40px;
+    padding: 13px 48px 13px 13px;
+  }
+  .label {
+    font-size: 24px;
+    line-height: 32px;
+  }
+  .icon svg {
+    width: 24px;
+    height: 24px;
+  }
+  .option {
+    font-size: 18px;
+    line-height: 22px;
+    padding: 6px 8px;
+    border-radius: 12px;
   }
 }

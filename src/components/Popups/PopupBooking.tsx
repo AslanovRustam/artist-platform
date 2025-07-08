@@ -73,6 +73,7 @@ function PopupBooking({ onClose }: Props) {
           classNameSelect={styles.selectBooking}
           placeholder="Select event type"
           className={styles.containerWidth}
+          classNameOption={styles.option}
         />
         <DatePicker
           label="Event Date"
@@ -107,6 +108,7 @@ function PopupBooking({ onClose }: Props) {
           placeholder="Select duration"
           icon={<Clock className={styles.icon} />}
           className={styles.containerWidth}
+          classNameOption={styles.option}
         />
         <CustomSelectWithCheckbox
           label="Event Location"
@@ -130,6 +132,7 @@ function PopupBooking({ onClose }: Props) {
           classNameLabel={styles.labelBooking}
           classNameSelect={styles.selectBooking}
           className={styles.containerWidth}
+          classNameOption={styles.option}
         />
         <Input
           label="Additional Information"

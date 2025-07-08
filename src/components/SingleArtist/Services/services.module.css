@@ -7,7 +7,8 @@
 }
 .list {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(315px, 1fr));
+  /* grid-template-columns: repeat(auto-fill, minmax(315px, 1fr)); */
+  grid-template-columns: repeat(4, minmax(16.4em, 1fr));
   gap: 20px;
   margin: 64px 0;
   width: 100%;
@@ -62,6 +63,7 @@
   .list {
     gap: 8px;
     margin: 40px 0;
+    grid-template-columns: auto;
   }
   .item {
     width: 100%;
@@ -72,7 +74,7 @@
   }
   .iconContainer {
     transform: translate(-25%, -43%);
-    width: 90px;
+    width: 70px;
   }
   .index {
     font-size: 31px;
@@ -81,5 +83,6 @@
   .stepDescription {
     font-size: 18px;
     line-height: 22px;
+    margin-right: auto;
   }
 }

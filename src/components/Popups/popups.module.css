@@ -39,6 +39,7 @@
 }
 .form,
 .formColumn {
+  position: relative;
   display: flex;
   padding: 24px 20px;
   align-items: center;
@@ -72,8 +73,10 @@
   gap: 16px;
 }
 .icon {
-  width: 24px;
-  height: 24px;
+  /* width: 24px;
+  height: 24px; */
+  width: 1.25rem;
+  height: 1.25rem;
 }
 .containerWidth {
   width: 248px !important;
@@ -372,6 +375,9 @@
 .m0 {
   margin: 0;
 }
+.option {
+  font-size: 14px;
+}
 @media (orientation: portrait) {
   .container {
     height: 100% !important;
@@ -432,5 +438,9 @@
   .stepContainer {
     margin: 16px 0;
     gap: 16px;
+  }
+  .icon {
+    width: 24px;
+    height: 24px;
   }
 }

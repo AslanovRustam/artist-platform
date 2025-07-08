@@ -6,9 +6,11 @@
 
 .label {
   color: var(--Yellow);
-  font-size: 24px;
   font-weight: 700;
-  line-height: 32px;
+  /* font-size: 24px;
+  line-height: 32px; */
+  font-size: 1.33em;
+  line-height: 133%;
 }
 
 .inputContainer {
@@ -29,15 +31,18 @@
 .input {
   width: 100%;
   max-width: 285px;
+  /* max-width: 14.84rem; */
   color: var(--White);
-  font-size: 18px;
-  line-height: 24px;
+  /* font-size: 18px;
+  line-height: 24px; */
   outline: none;
   transition: var(--transition);
   border-radius: 999px;
   border: 0.5px solid var(--White);
   background: var(--Dark-Grey);
-  padding: 20px 20px 20px 40px;
+  font-size: 0.9375em;
+  line-height: 133%;
+  padding: 1.04em 1.04em 1.04em 2.3em;
   font-family: Gotham-Book;
 }
 
@@ -45,7 +50,8 @@
   appearance: none;
   -webkit-appearance: none;
   -moz-appearance: none;
-  width: 285px;
+  /* width: 285px; */
+  width: 14.84rem;
   cursor: pointer;
   background-image: url("../../assets/icons/arrow.svg");
   background-repeat: no-repeat;
@@ -60,5 +66,11 @@
   .input {
     max-width: unset;
     padding: 13px 12px 13px 40px;
+    font-size: 18px;
+    line-height: 24px;
+  }
+  .label {
+    font-size: 24px;
+    line-height: 32px;
   }
 }

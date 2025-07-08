@@ -21,9 +21,11 @@
 }
 .title,
 .whiteText {
-  font-size: 96px;
   font-weight: 700;
-  line-height: 110px;
+  /* font-size: 96px;
+  line-height: 110px; */
+  font-size: 5em;
+  line-height: 114%;
   text-transform: uppercase;
   text-align: center;
   z-index: 1;
@@ -32,10 +34,13 @@
 }
 .subTitle {
   text-align: center;
-  font-size: 36px;
   font-weight: 500;
+  /* font-size: 36px;
   line-height: 48px;
-  margin: 20px 0;
+  margin: 20px 0; */
+  font-size: 1.875em;
+  line-height: 133%;
+  margin: 1.04em 0;
   z-index: 1;
 }
 .whiteText {

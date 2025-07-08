@@ -9,16 +9,25 @@ import { NavBtnNext, NavBtnPrev } from "./NavButton";
 import styles from "./slider.module.css";
 import "swiper/css";
 import "swiper/css/pagination";
+import Button from "../Button/Button";
 
 type Props = {
   galleryList?: string[];
   testimonials?: { id: number; author: string; client: string; text: string }[];
+  tours?: {
+    id: number;
+    photo: string;
+    place: string;
+    date: string;
+    location: string;
+  }[];
+  onClick?: () => void;
 };
 
-function Slider({ galleryList, testimonials }: Props) {
+function Slider({ galleryList, testimonials, tours, onClick }: Props) {
   const swiperRef = useRef<SwiperType | null>(null);
   return (
-    <div className={styles.container}>
+    <div className={clsx(styles.container, tours && styles.tours)}>
       <div className={clsx(styles.navBtn, styles.prev)}>
         <NavBtnPrev swiper={swiperRef} />
       </div>
@@ -48,6 +57,24 @@ function Slider({ galleryList, testimonials }: Props) {
                 <p className={styles.author}>{item.author}</p>
                 <p className={styles.client}>{item.client}</p>
               </div>
+            </SwiperSlide>
+          ))}
+        {tours &&
+          tours.map((tour, index) => (
+            <SwiperSlide className={styles.sliderItem} key={index}>
+              <li className={styles.item}>
+                <img
+                  src={tour.photo}
+                  alt={tour.place}
+                  className={styles.image}
+                />
+                <div className={styles.info}>
+                  <p className={styles.place}>{tour.place}</p>
+                  <p className={styles.date}>{tour.date}</p>
+                  <p className={styles.location}>{tour.location}</p>
+                </div>
+                <Button text="Book now" className="tours" onClick={onClick} />
+              </li>
             </SwiperSlide>
           ))}
       </Swiper>

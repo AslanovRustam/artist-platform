@@ -3,7 +3,7 @@
   display: flex;
   align-items: center;
   flex-direction: column;
-  padding: 100px 0;
+  padding: var(--padding-inner-section) 0;
   background-image: url(../../assets/images/bg-missions.jpg);
   background-size: cover;
   background-repeat: no-repeat;
@@ -15,7 +15,8 @@
   display: flex;
   align-items: center;
   flex-direction: column;
-  gap: 40px;
+  /* gap: 40px; */
+  gap: 2.08em;
   max-width: 1320px;
   width: 100%;
   z-index: 1;
@@ -23,8 +24,10 @@
 .title {
   color: var(--Yellow);
   text-align: center;
-  font-size: 80px;
-  line-height: 90px;
+  /* font-size: 80px;
+  line-height: 90px; */
+  font-size: 4.17em;
+  line-height: 112.5%;
   text-transform: uppercase;
 }
 
@@ -32,19 +35,25 @@
 .subTitleGreen {
   color: var(--White);
   text-align: center;
-  font-size: 36px;
   font-weight: 500;
+  /* font-size: 36px;
   line-height: 48px;
-  max-width: 1009px;
+  max-width: 1009px; */
+  font-size: 1.875em;
+  line-height: 133%;
+  max-width: 52.55em;
 }
 .subTitleGreen {
   color: var(--Yellow);
 }
 .description {
   text-align: center;
-  font-size: 24px;
-  line-height: 32px;
-  max-width: 580px;
+  /* font-size: 24px;
+  line-height: 32px; */
+  /* max-width: 580px; */
+  font-size: 1.25em;
+  line-height: 133%;
+  max-width: 30.2em;
   font-family: Gotham-Book;
 }
 .decorLeft {

@@ -1,12 +1,9 @@
 import { useEffect, useRef, useState, type ReactNode } from "react";
 import clsx from "clsx";
-// import styles from "./datepicker.module.css";
-import styles from "../CustomSelect/customSelect.module.css";
-
 import { format } from "date-fns";
-
 import Calendar from "react-calendar";
 import "react-calendar/dist/Calendar.css";
+import styles from "../CustomSelect/customSelect.module.css";
 
 type Props = {
   label: string;

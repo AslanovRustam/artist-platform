@@ -13,6 +13,7 @@ type Props = {
   className?: string;
   classNameLabel?: string;
   classNameSelect?: string;
+  classNameOption?: string;
   icon?: ReactNode;
 };
 
@@ -26,6 +27,7 @@ export default function CustomSelect({
   className,
   classNameLabel,
   classNameSelect,
+  classNameOption,
   icon,
 }: Props) {
   const [isOpen, setIsOpen] = useState<boolean>(false);
@@ -77,9 +79,13 @@ export default function CustomSelect({
             {options.map((opt) => (
               <li
                 key={opt}
-                className={clsx(styles.option, {
-                  [styles.selectedOption]: opt === value,
-                })}
+                className={clsx(
+                  styles.option,
+                  {
+                    [styles.selectedOption]: opt === value,
+                  },
+                  classNameOption && classNameOption
+                )}
                 onClick={() => handleSelect(opt)}
               >
                 {opt}

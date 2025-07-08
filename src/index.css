@@ -28,9 +28,13 @@
 
   /* utils */
   --transition: all 0.3s ease-in-out;
-  --padding-container-desktop: 300px;
+  /* --padding-container-desktop: 300px;
   --padding-container-mobile: 16px;
-  --padding-inner-section: 100px;
+  --padding-inner-section: 100px; */
+  --padding-container-desktop: 15.62em;
+  --padding-container-mobile: 0.833em;
+  --padding-inner-section: 5.21em;
+  --padding-inner-80: 4.166em;
 
   color-scheme: light dark;
   color: var(--White);
@@ -131,9 +135,58 @@ button {
   z-index: 2;
   overflow-y: scroll;
 }
-.ReactModal__Content .ReactModal__Content--after-open {
-  transform: unset !important;
-  inset: unset !important;
+
+.react-calendar {
+  background: var(--Dark-Grey);
+  color: var(--White);
+  border: none;
+  border-radius: 16px;
+  font-family: Gotham-Book;
+  width: 100%;
+}
+
+.react-calendar__navigation {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+.react-calendar__navigation button {
+  background: none;
+  color: var(--White);
+  font-weight: 600;
+  font-size: 1em;
+}
+
+.react-calendar__month-view__days__day {
+  font-size: 1.2em;
+  padding: 0.75em 0.5em;
+  border-radius: 8px;
+  transition: background 0.3s ease;
+}
+
+.react-calendar__month-view__days__day:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.react-calendar__tile--active {
+  background: var(--Yellow);
+  color: var(--Dark-Grey);
+  border-radius: 8px;
+}
+
+.react-calendar__tile--now {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 8px;
+}
+
+.react-calendar__tile--now:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.react-calendar__tile:disabled {
+  color: #666;
+  background: none;
 }
 
 @media (orientation: portrait) {
@@ -145,5 +198,13 @@ button {
   }
   .ReactModal__Overlay--after-open {
     overflow-y: unset;
+  }
+  .ReactModal__Content--after-open {
+    transform: unset !important;
+    inset: unset !important;
+    width: 100% !important;
+  }
+  .react-calendar {
+    font-size: 4rem;
   }
 }
