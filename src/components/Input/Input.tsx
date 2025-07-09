@@ -46,7 +46,7 @@ export default function Input({
     <div className={clsx(styles.wrapper, className)}>
       <label htmlFor={name} className={clsx(styles.label, classNameLabel)}>
         {label}
-        {/* {infoBtn && (
+        {infoBtn && (
           <div className={styles.tooltipWrapper}>
             <Info className={styles.infoIcon} />
             <p
@@ -60,7 +60,7 @@ export default function Input({
               part of the budget.
             </p>
           </div>
-        )} */}
+        )}
       </label>
 
       <div className={styles.inputContainer}>
