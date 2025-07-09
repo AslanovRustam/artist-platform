@@ -14,6 +14,7 @@
 @media (orientation: portrait) {
   .container {
     padding: var(--padding-container-mobile);
+    justify-content: space-between;
   }
   .navPanel {
     display: none;

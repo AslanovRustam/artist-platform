@@ -99,6 +99,9 @@
   -webkit-line-clamp: 1;
   align-self: stretch;
   transition: var(--transition);
+
+  direction: var(--dir);
+  unicode-bidi: bidi-override;
 }
 .photo {
   width: 100%;

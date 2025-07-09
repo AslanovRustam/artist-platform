@@ -50,6 +50,9 @@
   /* font-size: 18px; */
   font-size: 14px;
   line-height: 122%;
+
+  direction: var(--dir);
+  unicode-bidi: bidi-override;
 }
 .checkboxInput {
   position: absolute;

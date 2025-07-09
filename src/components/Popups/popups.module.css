@@ -21,6 +21,9 @@
   font-weight: 800;
   line-height: 32px;
   margin-bottom: 8px;
+
+  direction: var(--dir);
+  unicode-bidi: bidi-override;
 }
 .subTitle {
   color: var(--Light-Grey);
@@ -28,6 +31,9 @@
   font-weight: 600;
   line-height: 20px;
   margin-bottom: 24px;
+
+  direction: var(--dir);
+  unicode-bidi: bidi-override;
 }
 .closeIcon {
   position: absolute;
@@ -67,6 +73,9 @@
   font-size: 18px;
   line-height: 24px;
   margin: 16px 0;
+
+  direction: var(--dir);
+  unicode-bidi: bidi-override;
 }
 .inputGroup {
   display: flex;
@@ -80,6 +89,7 @@
 }
 .containerWidth {
   width: 248px !important;
+  /* width: 48% !important; */
 }
 .containerWidth289 {
   width: 289px !important;
@@ -186,6 +196,9 @@
   font-weight: 600;
   line-height: 20px;
   margin-bottom: 4px;
+
+  direction: var(--dir);
+  unicode-bidi: bidi-override;
 }
 .stepDescription,
 .stepDescriptionReg {
@@ -193,12 +206,18 @@
   text-align: center;
   font-size: 14px;
   line-height: 20px;
+
+  direction: var(--dir);
+  unicode-bidi: bidi-override;
 }
 .stepName {
   color: var(--White);
   font-size: 24px;
   font-weight: 700;
   line-height: 32px;
+
+  direction: var(--dir);
+  unicode-bidi: bidi-override;
 }
 .stepContainer {
   display: flex;
@@ -214,6 +233,9 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
+.rightPosition {
+  justify-content: flex-end;
 }
 .button {
   display: flex;
@@ -234,6 +256,14 @@
   &:focus {
     background-color: var(--Yellow);
     color: var(--Grey-BG);
+  }
+
+  direction: var(--dir);
+  unicode-bidi: bidi-override;
+
+  span {
+    direction: var(--dir);
+    unicode-bidi: bidi-override;
   }
 }
 .button:hover .buttonPrevIcon,
@@ -267,6 +297,9 @@
   text-align: center;
   font-size: 14px;
   line-height: 20px;
+
+  direction: var(--dir);
+  unicode-bidi: bidi-override;
 }
 
 .linkYellow {
@@ -295,6 +328,9 @@
   font-size: 14px;
   line-height: 20px;
   list-style: disc;
+
+  direction: var(--dir);
+  unicode-bidi: bidi-override;
 }
 .item span {
   color: var(--Yellow);
@@ -315,6 +351,9 @@
     border-color: var(--Yellow);
     color: var(--Yellow);
   }
+
+  direction: var(--dir);
+  unicode-bidi: bidi-override;
 }
 
 .selectProfile {
@@ -336,6 +375,9 @@
   font-family: Gotham-Book;
   font-size: 16px;
   line-height: 20px;
+
+  direction: var(--dir);
+  unicode-bidi: bidi-override;
 }
 .uploadInfo1,
 .uploadInfo2 {
@@ -344,6 +386,9 @@
   font-family: Gotham-Book;
   font-size: 14px;
   line-height: 20px;
+
+  direction: var(--dir);
+  unicode-bidi: bidi-override;
 }
 .uploadInfo1 {
   margin: 8px 0 2px;
@@ -362,6 +407,9 @@
   font-family: Gotham-Book;
   font-size: 20px;
   line-height: 24px;
+
+  direction: var(--dir);
+  unicode-bidi: bidi-override;
 }
 .profileListTitle {
   color: var(--White);
@@ -369,6 +417,9 @@
   font-size: 16px;
   line-height: 20px;
   margin-bottom: 16px;
+
+  direction: var(--dir);
+  unicode-bidi: bidi-override;
 }
 .devider {
   width: 100%;
@@ -449,3 +500,8 @@
     height: 24px;
   }
 }
+/* @media (max-width: 900px) {
+  .containerWidth {
+    width: 100% !important;
+  }
+} */

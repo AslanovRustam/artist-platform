@@ -15,6 +15,9 @@
   margin-bottom: 12px;
   line-height: 114.6%;
   font-size: 5em;
+
+  direction: var(--dir);
+  unicode-bidi: bidi-override;
 }
 .direction {
   color: var(--Yellow);
@@ -22,6 +25,9 @@
   font-size: 1.875em;
   line-height: 133%;
   margin-bottom: 20px;
+
+  direction: var(--dir);
+  unicode-bidi: bidi-override;
 }
 .wrapper {
   display: flex;
@@ -40,6 +46,9 @@
   font-size: 24px;
   font-weight: 700;
   line-height: 32px;
+
+  direction: var(--dir);
+  unicode-bidi: bidi-override;
 }
 .list {
   display: flex;

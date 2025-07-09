@@ -49,7 +49,10 @@
 .overflowHidden {
   overflow: hidden;
 }
-
+.wrapper {
+  direction: var(--dir);
+  unicode-bidi: bidi-override;
+}
 @media (orientation: portrait) {
   .title {
     font-size: 36px;

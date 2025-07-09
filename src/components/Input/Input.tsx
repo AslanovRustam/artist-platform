@@ -2,6 +2,7 @@ import type { ChangeEvent, ReactNode } from "react";
 import clsx from "clsx";
 import styles from "./input.module.css";
 import Info from "../../assets/icons/info.svg?react";
+import { useDirection } from "../../context/DirectionContext";
 
 type Props = {
   label: string;
@@ -32,6 +33,8 @@ export default function Input({
   rows = 2,
   infoBtn,
 }: Props) {
+  const { direction } = useDirection();
+
   const handleChange = (
     e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
   ) => {
@@ -43,16 +46,21 @@ export default function Input({
     <div className={clsx(styles.wrapper, className)}>
       <label htmlFor={name} className={clsx(styles.label, classNameLabel)}>
         {label}
-        {infoBtn && (
+        {/* {infoBtn && (
           <div className={styles.tooltipWrapper}>
             <Info className={styles.infoIcon} />
-            <p className={styles.tooltipText}>
+            <p
+              className={clsx(
+                styles.tooltipText,
+                direction === "rtl" && styles.right
+              )}
+            >
               AMP will provide the necessary Tech & Hospitality requirements for
               the artist to perform at your event, and this will be included as
               part of the budget.
             </p>
           </div>
-        )}
+        )} */}
       </label>
 
       <div className={styles.inputContainer}>

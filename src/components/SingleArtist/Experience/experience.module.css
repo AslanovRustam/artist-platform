@@ -17,6 +17,9 @@
   font-size: 1.25em;
   font-weight: 700;
   line-height: 133%;
+
+  direction: var(--dir);
+  unicode-bidi: bidi-override;
 }
 .icon {
   /* width: 40px;

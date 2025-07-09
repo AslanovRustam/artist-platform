@@ -42,6 +42,9 @@
   line-height: 112.5%;
   max-width: 58.33em;
   margin-bottom: 32px;
+
+  direction: var(--dir);
+  unicode-bidi: bidi-override;
 }
 
 .description {
@@ -52,6 +55,9 @@
   line-height: 48px;
   margin-bottom: 40px;
   z-index: 1;
+
+  direction: var(--dir);
+  unicode-bidi: bidi-override;
 }
 @media (orientation: portrait) {
   .container {

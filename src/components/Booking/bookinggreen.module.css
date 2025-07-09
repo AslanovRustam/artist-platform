@@ -34,6 +34,9 @@
 .title {
   /* max-width: 900px; */
   max-width: 46.875em;
+
+  direction: var(--dir);
+  unicode-bidi: bidi-override;
 }
 .titleBlue {
   color: var(--Blue);
@@ -50,6 +53,9 @@
   max-width: 44.16rem;
   margin-bottom: 3.33rem;
   font-family: Gotham-Book;
+
+  direction: var(--dir);
+  unicode-bidi: bidi-override;
 }
 .description {
   text-align: center;
@@ -61,6 +67,9 @@
   color: var(--Grey-BG);
   /* margin: 20px 0; */
   margin: 1.04rem 0;
+
+  direction: var(--dir);
+  unicode-bidi: bidi-override;
 }
 .triangleFirst,
 .triangleSecond {

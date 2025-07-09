@@ -25,6 +25,9 @@
 .fileInfo {
   color: var(--White);
   margin-top: 12px;
+
+  direction: var(--dir);
+  unicode-bidi: bidi-override;
 }
 
 .error {
@@ -42,6 +45,9 @@
   font-size: 24px;
   line-height: 32px;
   margin-bottom: 8px;
+
+  direction: var(--dir);
+  unicode-bidi: bidi-override;
 }
 @media (orientation: portrait) {
   .title {

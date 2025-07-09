@@ -16,6 +16,9 @@
   &:focus {
     color: var(--Yellow);
   }
+
+  direction: var(--dir);
+  unicode-bidi: bidi-override;
 }
 @media (max-width: 768px) {
   .item button {

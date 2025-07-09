@@ -26,6 +26,9 @@
   font-family: Gotham-Book;
   font-size: 1.25em;
   line-height: 133%;
+
+  direction: var(--dir);
+  unicode-bidi: bidi-override;
 }
 .description1 {
   margin-bottom: 20px;

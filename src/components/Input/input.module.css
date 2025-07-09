@@ -13,6 +13,9 @@
   line-height: 32px; */
   font-size: 1.33em;
   line-height: 133%;
+
+  direction: var(--dir);
+  unicode-bidi: bidi-override;
 }
 
 .inputContainer {
@@ -46,6 +49,14 @@
   line-height: 133%;
   padding: 1.04em 1.04em 1.04em 2.3em;
   font-family: Gotham-Book;
+
+  direction: var(--dir);
+  unicode-bidi: bidi-override;
+
+  &::placeholder {
+    direction: var(--dir);
+    unicode-bidi: bidi-override;
+  }
 }
 
 .select {
@@ -85,6 +96,9 @@
   padding: 0.5em;
   font-family: Gotham-Book;
   z-index: 2;
+
+  direction: var(--dir);
+  unicode-bidi: bidi-override;
 }
 .tooltipWrapper:hover .tooltipText,
 .tooltipWrapper:focus .tooltipText {
@@ -96,7 +110,10 @@
   height: 16px;
   margin-top: 4px;
 }
-
+.right {
+  /* right: unset; */
+  /* left: 0; */
+}
 @media (orientation: portrait) {
   .wrapper {
     width: 100%;
@@ -115,3 +132,9 @@
     margin-top: 2px;
   }
 }
+
+/* @media (max-widh: 900px) {
+  .input {
+    max-width: unset;
+  }
+} */

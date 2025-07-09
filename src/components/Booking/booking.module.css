@@ -24,6 +24,9 @@
   font-size: 4.17em;
   line-height: 112.5%;
   text-transform: uppercase;
+
+  direction: var(--dir);
+  unicode-bidi: bidi-override;
 }
 .title {
   /* margin-bottom: 40px; */
@@ -44,6 +47,9 @@
   line-height: 133%;
   max-width: 38.54rem;
   font-family: Gotham-Book;
+
+  direction: var(--dir);
+  unicode-bidi: bidi-override;
 }
 .list {
   display: grid;
@@ -100,6 +106,9 @@
   margin-bottom: 12px; */
   font-size: 1.25em;
   margin-bottom: 12px;
+
+  direction: var(--dir);
+  unicode-bidi: bidi-override;
 }
 .stepDescription {
   color: var(--White);
@@ -109,6 +118,9 @@
   font-size: 1.04em;
   line-height: 125%;
   font-family: Gotham-Book;
+
+  direction: var(--dir);
+  unicode-bidi: bidi-override;
 }
 @media (orientation: portrait) {
   .container {

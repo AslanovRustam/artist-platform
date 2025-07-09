@@ -38,6 +38,9 @@
   &:focus {
     color: var(--Yellow);
   }
+
+  direction: var(--dir);
+  unicode-bidi: bidi-override;
 }
 .links .item {
   color: var(--Light-Grey);

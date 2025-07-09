@@ -538,16 +538,23 @@ export default function PopupProfile({ onClose }: Props) {
           {renderStepForm()}
         </form>
         {renderStepAdditionalInfo()}
-        <div className={styles.buttonContainer}>
-          <button
-            type="button"
-            className={styles.button}
-            onClick={() => setActiveStep((prev) => Math.max(prev - 1, 0))}
-            disabled={activeStep === 0}
-          >
-            <Arrow className={styles.buttonPrevIcon} />
-            <span>Previous</span>
-          </button>
+        <div
+          className={clsx(
+            styles.buttonContainer,
+            activeStep === 0 && styles.rightPosition
+          )}
+        >
+          {activeStep > 0 && (
+            <button
+              type="button"
+              className={styles.button}
+              onClick={() => setActiveStep((prev) => Math.max(prev - 1, 0))}
+              disabled={activeStep === 0}
+            >
+              <Arrow className={styles.buttonPrevIcon} />
+              <span>Previous</span>
+            </button>
+          )}
 
           <div className={styles.rightBtnContainer}>
             {activeStep === 3 ? (

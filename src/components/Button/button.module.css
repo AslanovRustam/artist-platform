@@ -17,6 +17,9 @@
   &:focus {
     background-color: var(--White);
   }
+
+  direction: var(--dir);
+  unicode-bidi: bidi-override;
 }
 
 .buttonIcon,
@@ -43,6 +46,8 @@
 
   span {
     margin-top: 2px;
+    direction: var(--dir);
+    unicode-bidi: bidi-override;
   }
 
   &:hover,

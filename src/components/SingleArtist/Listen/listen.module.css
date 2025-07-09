@@ -9,6 +9,9 @@
   text-transform: uppercase;
   /* margin-bottom: 64px; */
   margin-bottom: 3.33rem;
+
+  direction: var(--dir);
+  unicode-bidi: bidi-override;
 }
 .spotiFyTitle {
   /* font-size: 36px; */
@@ -17,6 +20,11 @@
   display: flex;
   align-items: center;
   gap: 8px;
+
+  p {
+    direction: var(--dir);
+    unicode-bidi: bidi-override;
+  }
 }
 .spotiFyList {
   display: grid;

@@ -49,6 +49,18 @@ export const LANGUEGES = {
   arabic: "العربية",
 } as const;
 
+export type LanguageKey = keyof typeof LANGUEGES; // "en" | "arabic"
+
+export const LANGUAGE_TO_DIRECTION: Record<LanguageKey, "ltr" | "rtl"> = {
+  en: "ltr",
+  arabic: "rtl",
+};
+
+export const DIRECTION_TO_LANGUAGE: Record<"ltr" | "rtl", LanguageKey> = {
+  ltr: "en",
+  rtl: "arabic",
+};
+
 export const ANCHORS = {
   artists: { id: "artists", anchor: "#artists" },
   howItWorks: { id: "howItWorks", anchor: "#howItWorks" },

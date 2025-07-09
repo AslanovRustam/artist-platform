@@ -28,6 +28,9 @@
   span {
     color: var(--Yellow);
   }
+
+  direction: var(--dir);
+  unicode-bidi: bidi-override;
 }
 .subTitle {
   text-align: center;
@@ -39,6 +42,8 @@
   /* margin: 20px 0; */
   margin: 1.04em 0;
   z-index: 1;
+  direction: var(--dir);
+  unicode-bidi: bidi-override;
 }
 
 .description {

@@ -1,26 +1,37 @@
-import { useState } from "react";
 import clsx from "clsx";
-import { LANGUEGES } from "../../utils/constants";
+import {
+  DIRECTION_TO_LANGUAGE,
+  LANGUAGE_TO_DIRECTION,
+  LANGUEGES,
+  type LanguageKey,
+} from "../../utils/constants";
+import { useDirection } from "../../context/DirectionContext";
 import styles from "./langSwitcher.module.css";
+import { useEffect } from "react";
 
 type Props = {};
 
 export default function LangSwitcher({}: Props) {
-  const [currentLanguage, setCurrentLanguage] = useState<string>(LANGUEGES.en);
+  const { direction, setDirection } = useDirection();
 
-  const handleLanguageChange = (variant: string) => {
-    setCurrentLanguage(variant);
+  const currentLang = DIRECTION_TO_LANGUAGE[direction];
+
+  const handleChange = (langKey: LanguageKey) => {
+    setDirection(LANGUAGE_TO_DIRECTION[langKey]);
+    document.documentElement.style.setProperty("--dir", direction);
   };
+  console.log(direction);
+
+  useEffect(() => {
+    document.documentElement.style.setProperty("--dir", direction);
+  }, [direction]);
 
   return (
     <div className={styles.container}>
       <button
         type="button"
-        className={clsx(
-          styles.button,
-          currentLanguage === LANGUEGES.en && styles.active
-        )}
-        onClick={() => handleLanguageChange(LANGUEGES.en)}
+        className={clsx(styles.button, currentLang === "en" && styles.active)}
+        onClick={() => handleChange("en")}
       >
         {LANGUEGES.en}
       </button>
@@ -29,9 +40,9 @@ export default function LangSwitcher({}: Props) {
         type="button"
         className={clsx(
           styles.button,
-          currentLanguage === LANGUEGES.arabic && styles.active
+          currentLang === "arabic" && styles.active
         )}
-        onClick={() => handleLanguageChange(LANGUEGES.arabic)}
+        onClick={() => handleChange("arabic")}
       >
         {LANGUEGES.arabic}
       </button>

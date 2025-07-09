@@ -36,6 +36,9 @@
   font-size: 1.25em;
   font-weight: 700;
   line-height: 133%;
+
+  direction: var(--dir);
+  unicode-bidi: bidi-override;
 }
 .date {
   color: var(--Orange);
@@ -44,12 +47,18 @@
   font-weight: 400;
   line-height: 120%;
   text-transform: uppercase;
+
+  direction: var(--dir);
+  unicode-bidi: bidi-override;
 }
 .location {
   /* font-size: 20px; */
   font-size: 1.04rem;
   font-weight: 400;
   line-height: 120%;
+
+  direction: var(--dir);
+  unicode-bidi: bidi-override;
 }
 @media (orientation: portrait) {
   .container {

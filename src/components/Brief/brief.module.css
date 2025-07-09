@@ -23,6 +23,9 @@
 .title {
   /* margin-bottom: 40px; */
   margin-bottom: 2.08rem;
+
+  direction: var(--dir);
+  unicode-bidi: bidi-override;
 }
 .titleGreen {
   color: var(--Yellow);
@@ -38,6 +41,9 @@
   line-height: 32px; */
   font-size: 1.25em;
   line-height: 133%;
+
+  direction: var(--dir);
+  unicode-bidi: bidi-override;
 }
 .subTitleGreen {
   /* max-width: 658px; */

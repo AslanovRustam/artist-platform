@@ -133,6 +133,9 @@ input[type="range"]::-webkit-slider-thumb {
   font-weight: 700;
   line-height: 32px;
   margin-bottom: 12px;
+
+  direction: var(--dir);
+  unicode-bidi: bidi-override;
 }
 .line {
   background-color: var(--Light-Grey);

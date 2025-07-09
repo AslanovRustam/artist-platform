@@ -51,6 +51,9 @@
   border-radius: 999px;
   background: var(--White);
   display: inline-block;
+
+  direction: var(--dir);
+  unicode-bidi: bidi-override;
 }
 .wrapper {
   display: flex;
@@ -67,6 +70,9 @@
   align-self: stretch;
   font-weight: 700;
   line-height: 32px;
+
+  direction: var(--dir);
+  unicode-bidi: bidi-override;
 }
 .genre {
   padding: 12px 20px;
@@ -78,12 +84,18 @@
   font-weight: 700;
   line-height: 32px;
   width: fit-content;
+
+  direction: var(--dir);
+  unicode-bidi: bidi-override;
 }
 
 .variants {
   display: flex;
   align-items: center;
   gap: 4px;
+
+  direction: var(--dir);
+  unicode-bidi: bidi-override;
 }
 .singleVariant {
   padding: 8px 12px;

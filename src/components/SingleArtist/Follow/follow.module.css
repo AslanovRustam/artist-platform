@@ -35,6 +35,9 @@
   color: var(--Dark-Grey);
   font-size: 20px;
   line-height: 24px;
+
+  direction: var(--dir);
+  unicode-bidi: bidi-override;
 }
 @media (orientation: portrait) {
   .container {

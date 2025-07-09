@@ -12,6 +12,9 @@
   line-height: 32px; */
   font-size: 1.33em;
   line-height: 133%;
+
+  direction: var(--dir);
+  unicode-bidi: bidi-override;
 }
 
 .icon {
@@ -49,7 +52,7 @@
   border: 0.5px solid var(--White);
   background: var(--Dark-Grey);
   /* padding: 20px 48px 20px 40px; */
-  padding: 1.04em 2.5em 1.04em 2.08em;
+  padding: 1.04em 3em 1.04em 2.08em;
   /* padding: 1.04em 2.5em; */
   transition: var(--transition);
   cursor: pointer;
@@ -59,7 +62,7 @@
 }
 .selectBoxWOIcon {
   /* padding: 20px 48px 20px 16px; */
-  padding: 1.04em 2.5em 1.04em 0.833em;
+  padding: 1.04em 3em 1.04em 2.08em;
 }
 .arrow {
   position: absolute;
@@ -84,6 +87,9 @@
   overflow: hidden;
   text-overflow: ellipsis;
   width: 90%;
+
+  direction: var(--dir);
+  unicode-bidi: bidi-override;
 }
 .dropDownContainer {
   position: absolute;

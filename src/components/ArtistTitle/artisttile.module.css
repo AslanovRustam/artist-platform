@@ -14,6 +14,9 @@
   font-size: 5em;
   line-height: 114.6%;
   text-transform: uppercase;
+
+  direction: var(--dir);
+  unicode-bidi: bidi-override;
 }
 .subTitle {
   color: var(--White);
@@ -21,6 +24,9 @@
   line-height: 133%;
   font-size: 1.875em;
   text-align: center;
+
+  direction: var(--dir);
+  unicode-bidi: bidi-override;
 }
 @media (orientation: portrait) {
   .container {
