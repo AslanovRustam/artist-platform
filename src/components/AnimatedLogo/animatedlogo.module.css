@@ -2,6 +2,7 @@
   display: flex;
   align-items: center;
   gap: 16px;
+  /* gap: 0.833rem; */
   color: var(--White);
   transition: var(--transition);
 }
@@ -29,6 +30,8 @@
 .logoText {
   width: 79px;
   height: 33px;
+  /* width: 4.11rem;
+  height: 1.72rem; */
   transition: var(--transition);
   color: var(--Orange);
 }

@@ -1,6 +1,7 @@
 import type { ChangeEvent, ReactNode } from "react";
 import clsx from "clsx";
 import styles from "./input.module.css";
+import Info from "../../assets/icons/info.svg?react";
 
 type Props = {
   label: string;
@@ -14,6 +15,7 @@ type Props = {
   classNameLabel?: string;
   classNameInput?: string;
   rows?: number;
+  infoBtn?: boolean;
 };
 
 export default function Input({
@@ -28,6 +30,7 @@ export default function Input({
   classNameLabel,
   classNameInput,
   rows = 2,
+  infoBtn,
 }: Props) {
   const handleChange = (
     e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
@@ -40,6 +43,16 @@ export default function Input({
     <div className={clsx(styles.wrapper, className)}>
       <label htmlFor={name} className={clsx(styles.label, classNameLabel)}>
         {label}
+        {infoBtn && (
+          <div className={styles.tooltipWrapper}>
+            <Info className={styles.infoIcon} />
+            <p className={styles.tooltipText}>
+              AMP will provide the necessary Tech & Hospitality requirements for
+              the artist to perform at your event, and this will be included as
+              part of the budget.
+            </p>
+          </div>
+        )}
       </label>
 
       <div className={styles.inputContainer}>

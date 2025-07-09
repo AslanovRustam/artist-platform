@@ -11,6 +11,7 @@ type Props = {
   children?: ReactNode;
   fullWidth?: boolean;
   fullWidthAll?: boolean;
+  onlyMobile?: boolean;
 };
 
 function Button({
@@ -22,6 +23,7 @@ function Button({
   children,
   fullWidth,
   fullWidthAll,
+  onlyMobile,
 }: Props) {
   return (
     <button
@@ -32,7 +34,8 @@ function Button({
         styles.button,
         className && styles[className],
         fullWidth && styles.fullWidth,
-        fullWidthAll && styles.fullWidthAll
+        fullWidthAll && styles.fullWidthAll,
+        onlyMobile && styles.onlyMobile
       )}
     >
       <span>{text}</span>

@@ -112,8 +112,19 @@ function Filter({
               className="white"
               onClick={clear}
             />
-            <Button text="Apply" fullWidthAll onClick={handleSubmit} />
+            <Button
+              text="Apply"
+              fullWidthAll
+              onClick={handleSubmit}
+              className="green"
+            />
           </div>
+          <Button
+            text="Search"
+            fullWidthAll
+            onClick={handleSubmit}
+            onlyMobile
+          />
         </div>
       )}
     </div>

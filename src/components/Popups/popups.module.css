@@ -97,7 +97,8 @@
 .selectBookingTextArea,
 .inputArtist,
 .inputArtistTextArea,
-.selectProfile {
+.selectProfile,
+.selectLocation {
   border-color: transparent !important;
   border-radius: 0 !important;
   font-size: 14px !important;
@@ -319,6 +320,9 @@
 .selectProfile {
   padding: 10px 48px 10px 16px !important;
 }
+.selectLocation {
+  padding: 10px 48px 10px 30px !important;
+}
 
 .subTitle {
   color: var(--Light-Grey);
@@ -378,6 +382,7 @@
 .option {
   font-size: 14px;
 }
+
 @media (orientation: portrait) {
   .container {
     height: 100% !important;
@@ -404,7 +409,7 @@
     padding: 16px;
     max-height: 90vh;
     overflow-y: auto;
-    padding-bottom: 50px;
+    padding-bottom: 70px;
   }
   .stepsItem:not(:last-child)::after {
     right: -14px;

@@ -71,13 +71,14 @@
     flex-direction: column;
     gap: 8px;
     min-height: auto;
+    padding: 26px 20px 26px 70px;
   }
   .iconContainer {
     transform: translate(-25%, -43%);
     width: 70px;
   }
   .index {
-    font-size: 31px;
+    font-size: 26px;
   }
 
   .stepDescription {

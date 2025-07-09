@@ -1,7 +1,7 @@
 import { useState, type FormEvent } from "react";
 // Components
 import CustomSelect from "../CustomSelect/CustomSelect";
-import CustomSelectWithCheckbox from "../CustomSelect/CustomSelectWithCheckbox";
+// import CustomSelectWithCheckbox from "../CustomSelect/CustomSelectWithCheckbox";
 import Input from "../Input/Input";
 import DatePicker from "../DatePicker/DatePicker";
 import Button from "../Button/Button";
@@ -20,17 +20,17 @@ import styles from "./popups.module.css";
 type Props = { onClose: () => void };
 
 function PopupBooking({ onClose }: Props) {
-  const initialLocations: ICheckbox[] = LOCATIONS.map((loc) => ({
-    name: loc,
-    checked: false,
-  }));
+  // const initialLocations: ICheckbox[] = LOCATIONS.map((loc) => ({
+  //   name: loc,
+  //   checked: false,
+  // }));
   const [formData, setFormData] = useState<{
     type: string;
     date: string;
     attendees: number | "";
     duration: string;
     budget: string;
-    location: ICheckbox[];
+    location: /*ICheckbox[]*/ string;
     information: string;
   }>({
     type: "",
@@ -38,7 +38,8 @@ function PopupBooking({ onClose }: Props) {
     attendees: "",
     duration: "",
     budget: "",
-    location: initialLocations,
+    // location: initialLocations,
+    location: "",
     information: "",
   });
 
@@ -110,7 +111,7 @@ function PopupBooking({ onClose }: Props) {
           className={styles.containerWidth}
           classNameOption={styles.option}
         />
-        <CustomSelectWithCheckbox
+        {/* <CustomSelectWithCheckbox
           label="Event Location"
           name="location"
           value={formData.location}
@@ -121,8 +122,21 @@ function PopupBooking({ onClose }: Props) {
           classNameLabel={styles.labelBooking}
           classNameSelect={styles.selectBooking}
           className={styles.containerWidth}
-        />
+        /> */}
         <CustomSelect
+          label="Location"
+          name="location"
+          onChange={handleFilterChange}
+          options={LOCATIONS}
+          value={formData.location}
+          classNameLabel={styles.labelBooking}
+          classNameSelect={styles.selectBooking}
+          placeholder="Select location"
+          className={styles.containerWidth}
+          classNameOption={styles.option}
+          icon={<Location className={styles.icon} />}
+        />
+        {/* <CustomSelect
           label="Budget"
           name="budget"
           value={formData.budget}
@@ -133,7 +147,22 @@ function PopupBooking({ onClose }: Props) {
           classNameSelect={styles.selectBooking}
           className={styles.containerWidth}
           classNameOption={styles.option}
+        /> */}
+        {/* <div className={styles.contanerForIcon}> */}
+        <Input
+          label="Your Budget (USD)"
+          name="budget"
+          onChange={handleFilterChange}
+          value={formData.budget}
+          icon={<Budget className={styles.icon} />}
+          classNameLabel={styles.labelBooking}
+          classNameInput={styles.selectBooking}
+          placeholder="Estimated guests"
+          className={styles.containerWidth}
+          infoBtn
         />
+        {/* <Info className={styles.infoIcon} />
+        </div> */}
         <Input
           label="Additional Information"
           name="information"

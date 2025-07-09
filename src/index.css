@@ -64,6 +64,12 @@
   src: local("Gotham-Book"),
     url(./assets/fonts/Gotham-Book/Gotham-Book-Font-500.otf) format("opentype");
 }
+@font-face {
+  font-family: "Cairo";
+  font-weight: 700;
+  src: local("Cairo"),
+    url(./assets/fonts/Cairo/Cairo-Bold.ttf) format("opentype");
+}
 
 * {
   padding: 0;

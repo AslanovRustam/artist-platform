@@ -6,7 +6,8 @@
 .item button {
   color: var(--White);
   font-size: 16px;
-  line-height: 20px;
+  /* font-size: 0.833em; */
+  line-height: 125%;
   letter-spacing: 0.7px;
   transition: var(--transition);
   cursor: pointer;
@@ -14,6 +15,14 @@
   &:hover,
   &:focus {
     color: var(--Yellow);
+  }
+}
+@media (max-width: 768px) {
+  .item button {
+    font-size: 12px;
+  }
+  .list {
+    gap: 16px;
   }
 }
 @media (orientation: portrait) {
@@ -24,6 +33,6 @@
   .item button {
     font-size: 24px;
     font-weight: 500;
-    line-height: 32px;
+    line-height: 133%;
   }
 }
