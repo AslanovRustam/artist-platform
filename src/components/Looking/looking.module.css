@@ -71,7 +71,8 @@
   }
   .decorStar {
     bottom: -25%;
-    left: 23%;
+    /* left: 23%; */
+    right: unset;
     width: 56rem;
     height: 56rem;
   }
