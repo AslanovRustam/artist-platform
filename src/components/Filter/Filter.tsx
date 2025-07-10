@@ -1,4 +1,6 @@
 import { useEffect, useRef, useState } from "react";
+import clsx from "clsx";
+import { useDirection } from "../../context/DirectionContext";
 // Componetns
 import CustomSelectWithCheckbox from "../CustomSelect/CustomSelectWithCheckbox";
 import RangeSlider from "../Range/Range";
@@ -34,6 +36,7 @@ function Filter({
   submit,
 }: Props) {
   const [isOpen, setIsOpen] = useState<boolean>(false);
+  const { direction } = useDirection();
   const wrapperRef = useRef<HTMLDivElement>(null);
   const popupRef = useRef<HTMLDivElement>(null);
 
@@ -74,7 +77,13 @@ function Filter({
         <FilterIcon className={styles.icon} />
       </div>
       {isOpen && (
-        <div ref={popupRef} className={styles.dropDownContainer}>
+        <div
+          ref={popupRef}
+          className={clsx(
+            styles.dropDownContainer,
+            direction === "rtl" && styles.rtl
+          )}
+        >
           <CustomSelectWithCheckbox
             label="Location"
             name="location"
@@ -94,6 +103,7 @@ function Filter({
               to: Number(formData.budget.to) || 0,
             }}
             onChange={handleRangeChange}
+            direction={direction}
           />
           <CustomSelectWithCheckbox
             label="Genre"

@@ -1,4 +1,6 @@
 import { useState } from "react";
+import clsx from "clsx";
+import { useDirection } from "../../../context/DirectionContext";
 // Components
 import { MaskText } from "../../AnimatedText/MaskText";
 import Title from "../Title/Title";
@@ -14,6 +16,7 @@ import styles from "./services.module.css";
 
 export default function Services() {
   const [isPopupOpen, setIsPopupOpen] = useState<boolean>(false);
+  const { direction } = useDirection();
 
   const togglePopup = () => {
     setIsPopupOpen(!isPopupOpen);
@@ -32,7 +35,14 @@ export default function Services() {
                   <DecorStar className={styles.icon} />
                   <span className={styles.index}>{index + 1}</span>
                 </div>
-                <p className={styles.stepDescription}>{step.text}</p>
+                <p
+                  className={clsx(
+                    styles.stepDescription,
+                    direction === "rtl" && styles.rtl
+                  )}
+                >
+                  {step.text}
+                </p>
               </li>
             </MaskText>
           ))}

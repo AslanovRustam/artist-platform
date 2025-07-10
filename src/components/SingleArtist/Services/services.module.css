@@ -58,6 +58,7 @@
   direction: var(--dir);
   unicode-bidi: bidi-override;
 }
+
 @media (orientation: portrait) {
   .container {
     padding: 60px 16px;
@@ -88,5 +89,10 @@
     font-size: 18px;
     line-height: 22px;
     margin-right: auto;
+  }
+
+  .rtl {
+    margin-right: unset;
+    margin-left: auto;
   }
 }

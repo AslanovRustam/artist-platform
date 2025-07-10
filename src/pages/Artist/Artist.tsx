@@ -104,7 +104,6 @@ export default function Artist() {
       <ArtistsList artistList={filteredArtist} />
       <SoundWaves />
       <Looking />
-      <SoundWaves />
     </section>
   );
 }

@@ -37,6 +37,10 @@
   gap: 12px;
   max-width: 360px;
 }
+.rtl {
+  right: unset;
+  left: 0;
+}
 .icon {
   width: 16px;
   height: 18px;

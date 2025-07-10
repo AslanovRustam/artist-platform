@@ -11,11 +11,14 @@ import Star from "../../assets/icons/star.svg?react";
 import { ANCHORS, ARTISTS_LIST, ROUTES } from "../../utils/constants";
 // Styles
 import styles from "./talents.module.css";
+import { useDirection } from "../../context/DirectionContext";
+import clsx from "clsx";
 
 function Talents() {
   const parallaxRef = useRef<HTMLDivElement>(null);
   const starRight = useRef<HTMLDivElement>(null);
   const starLeft = useRef<HTMLDivElement>(null);
+  const { direction } = useDirection();
 
   const handleMouseMove = (e: MouseEvent) => {
     const container = parallaxRef.current;
@@ -84,7 +87,14 @@ function Talents() {
                     alt={artist.name}
                     className={styles.photo}
                   />
-                  <p className={styles.name}>{artist.name}</p>
+                  <p
+                    className={clsx(
+                      styles.name,
+                      direction === "rtl" && styles.rtl
+                    )}
+                  >
+                    {artist.name}
+                  </p>
                 </p>
                 <NavLink
                   to={`${ROUTES.artists}/${artist.name}`}

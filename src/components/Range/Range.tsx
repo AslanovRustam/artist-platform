@@ -8,6 +8,7 @@ type Props = {
   step?: number;
   value: { from: number; to: number };
   onChange: (value: { from: number; to: number }) => void;
+  direction?: "ltr" | "rtl";
 };
 
 export default function RangeSlider({
@@ -16,6 +17,7 @@ export default function RangeSlider({
   step = 1,
   value,
   onChange,
+  direction,
 }: Props) {
   const [from, setFrom] = useState(value.from);
   const [to, setTo] = useState(value.to);
@@ -116,10 +118,23 @@ export default function RangeSlider({
         <div className={styles.sliderTrack}>
           <div
             className={styles.sliderRange}
-            style={{
-              left: `${((from - min) / (max - min)) * 100}%`,
-              width: `${((to - from) / (max - min)) * 100}%`,
-            }}
+            // style={{
+            //   left: `${((from - min) / (max - min)) * 100}%`,
+            //   width: `${((to - from) / (max - min)) * 100}%`,
+            // }}
+            style={
+              direction === "rtl"
+                ? {
+                    right: `${((from - min) / (max - min)) * 100}%`,
+                    width: `${((to - from) / (max - min)) * 100}%`,
+                    left: "unset",
+                  }
+                : {
+                    left: `${((from - min) / (max - min)) * 100}%`,
+                    width: `${((to - from) / (max - min)) * 100}%`,
+                    right: "unset",
+                  }
+            }
           />
         </div>
       </div>
