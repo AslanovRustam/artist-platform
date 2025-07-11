@@ -118,10 +118,6 @@ export default function RangeSlider({
         <div className={styles.sliderTrack}>
           <div
             className={styles.sliderRange}
-            // style={{
-            //   left: `${((from - min) / (max - min)) * 100}%`,
-            //   width: `${((to - from) / (max - min)) * 100}%`,
-            // }}
             style={
               direction === "rtl"
                 ? {

@@ -10,7 +10,7 @@
 .title {
   text-align: center;
   font-weight: 700;
-  /* font-size: 96px; */
+
   font-size: 5em;
   line-height: 114.6%;
   text-transform: uppercase;
@@ -20,7 +20,7 @@
 }
 .subTitle {
   color: var(--White);
-  /* font-size: 36px; */
+
   line-height: 133%;
   font-size: 1.875em;
   text-align: center;

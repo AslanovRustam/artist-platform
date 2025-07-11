@@ -15,7 +15,7 @@ import type { ICheckbox } from "../../types/types";
 import Search from "../../assets/icons/search.svg?react";
 import Budget from "../../assets/icons/budget.svg?react";
 import Location from "../../assets/icons/location.svg?react";
-// import Decor from "../../assets/icons/decorLeft.svg?react";
+
 // Styles
 import styles from "./brief.module.css";
 import { useNavigate } from "react-router";
@@ -105,7 +105,7 @@ export default function Brief() {
           />
         </form>
       </div>
-      {/* <div className={styles.triangleAnimation}> */}
+
       <svg
         viewBox="0 0 295 192"
         fill="none"
@@ -129,8 +129,6 @@ export default function Brief() {
           fill="currentColor"
         />
       </svg>
-      {/* </div> */}
-      {/* <Decor className={styles.decor} /> */}
     </div>
   );
 }

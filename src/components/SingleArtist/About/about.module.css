@@ -5,11 +5,9 @@
   justify-content: space-between;
 }
 .left {
-  /* max-width: 650px; */
   max-width: 33.85em;
 }
 .title {
-  /* font-size: 80px; */
   font-size: 4.167em;
   line-height: 112.5%;
   text-transform: uppercase;
@@ -18,7 +16,6 @@
   color: var(--Yellow);
 }
 .title {
-  /* margin-bottom: 64px; */
   margin-bottom: 3.33rem;
 }
 .description1,

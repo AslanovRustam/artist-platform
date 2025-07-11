@@ -3,10 +3,6 @@
 }
 
 .inputs {
-  /* display: flex;
-  justify-content: space-around;
-  align-items: flex-end;
-  gap: 8px;*/
 }
 .container {
   display: flex;
@@ -15,24 +11,6 @@
   gap: 8px;
   margin-bottom: 12px;
 }
-/* .inputGroup {
-  display: flex;
-  flex-direction: column;
-  flex: 1;
-}
-
-.inputGroup label {
-  font-size: 14px;
-  margin-bottom: 4px;
-} */
-
-/* .inputGroup input {
-  padding: 8px 12px;
-  border: 1px solid var(--Yellow);
-  border-radius: 6px;
-  font-size: 16px;
-  appearance: none;
-} */
 
 input[type="number"]::-webkit-inner-spin-button,
 input[type="number"]::-webkit-outer-spin-button {
@@ -68,7 +46,6 @@ input[type="range"]::-webkit-slider-thumb {
   border-radius: 50%;
   border: 2px solid var(--Yellow);
   background: var(--Grey-BG);
-  /* border: none; */
   cursor: pointer;
   -webkit-appearance: none;
 }

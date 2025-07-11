@@ -1,18 +1,17 @@
 import { NavLink } from "react-router";
 import { useRef, type MouseEvent } from "react";
+import clsx from "clsx";
+import { useDirection } from "../../context/DirectionContext";
 // Components
 import ButtonWithIcon from "../Button/ButtonWithIcon";
 import Button from "../Button/Button";
 import { MaskText } from "../AnimatedText/MaskText";
-// import Magnetic from "../Magnetic/Magnetic";
 // Images
 import Star from "../../assets/icons/star.svg?react";
 // Utils
 import { ANCHORS, ARTISTS_LIST, ROUTES } from "../../utils/constants";
 // Styles
 import styles from "./talents.module.css";
-import { useDirection } from "../../context/DirectionContext";
-import clsx from "clsx";
 
 function Talents() {
   const parallaxRef = useRef<HTMLDivElement>(null);
@@ -106,9 +105,9 @@ function Talents() {
             </li>
           ))}
         </ul>
-        {/* <Magnetic> */}
+
         <ButtonWithIcon text="view all artists" href={ROUTES.artists} />
-        {/* </Magnetic> */}
+
         <div ref={starLeft} className={styles.decorLeft}>
           <Star className={styles.decorIcon} />
         </div>

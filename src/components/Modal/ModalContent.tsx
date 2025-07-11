@@ -12,7 +12,6 @@ function ModalContent({ className, showModal, children }: Props) {
         showModal && styles.opacity,
         className && styles[className]
       )}
-      //   onClick={(e) => e.stopPropagation()}
     >
       {children}
     </div>

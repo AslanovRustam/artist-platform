@@ -19,20 +19,18 @@
 .textWrapper {
   display: flex;
   flex-direction: column;
-  /* gap: 20px; */
+
   gap: 1.04em;
 }
 .title {
   color: var(--Grey-BG);
   text-align: center;
-  /* font-size: 80px;
-  line-height: 90px; */
+
   font-size: 4.17em;
   line-height: 112.5%;
   text-transform: uppercase;
 }
 .title {
-  /* max-width: 900px; */
   max-width: 46.875em;
 
   direction: var(--dir);
@@ -44,10 +42,7 @@
 .subTitle {
   color: var(--Grey-BG);
   text-align: center;
-  /* font-size: 24px;
-  line-height: 32px;
-  max-width: 848px;
-  margin-bottom: 64px; */
+
   font-size: 1.25em;
   line-height: 133%;
   max-width: 44.16rem;
@@ -60,12 +55,11 @@
 .description {
   text-align: center;
   font-weight: 500;
-  /* font-size: 36px;
-  line-height: 48px; */
+
   font-size: 1.875em;
   line-height: 133%;
   color: var(--Grey-BG);
-  /* margin: 20px 0; */
+
   margin: 1.04rem 0;
 
   direction: var(--dir);
@@ -89,11 +83,10 @@
 .decorStar {
   position: absolute;
   top: 20%;
-  /* right: 0; */
-  /* width: 10.625rem; */
+
   right: -11%;
   width: 24rem;
-  /* rotate: 180deg; */
+
   background-size: cover;
   background-repeat: no-repeat;
   height: 24rem;

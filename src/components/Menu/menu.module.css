@@ -47,7 +47,6 @@
 }
 @media (orientation: portrait) {
   .container {
-    /* margin-left: auto; */
   }
   .buttonContainer {
     display: none;

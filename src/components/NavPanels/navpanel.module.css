@@ -6,7 +6,7 @@
 .item button {
   color: var(--White);
   font-size: 16px;
-  /* font-size: 0.833em; */
+
   line-height: 125%;
   letter-spacing: 0.7px;
   transition: var(--transition);

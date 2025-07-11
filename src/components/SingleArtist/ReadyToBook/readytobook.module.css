@@ -10,7 +10,7 @@
 .title {
   color: var(--Grey-BG);
   text-align: center;
-  /* font-size: 80px; */
+
   font-size: 4.167em;
   line-height: 112.5%;
   text-transform: uppercase;
@@ -19,7 +19,6 @@
   unicode-bidi: bidi-override;
 }
 .title {
-  /* max-width: 900px; */
   margin-bottom: 32px;
   max-width: 46.875rem;
 }
@@ -33,7 +32,7 @@
   font-size: 1.875em;
   line-height: 133%;
   margin-bottom: 40px;
-  /* margin-bottom: 2.08rem; */
+
   z-index: 1;
 
   direction: var(--dir);

@@ -19,9 +19,6 @@ function CustomModal({ children, open, onClose }: Props) {
       background: "transparent",
       border: "none",
       padding: "0",
-      // overflow: "scroll",
-      // position: "fixed",
-      // zIndex: "1",
     },
     overlay: {
       background: "rgba(0, 0, 0, 0.9)",

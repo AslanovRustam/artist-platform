@@ -37,7 +37,6 @@
 }
 .closeIcon {
   position: absolute;
-  /* top: 18px; */
   right: 18px;
   width: 24px;
   height: 24px;
@@ -82,14 +81,11 @@
   gap: 16px;
 }
 .icon {
-  /* width: 24px;
-  height: 24px; */
   width: 1.25rem;
   height: 1.25rem;
 }
 .containerWidth {
   width: 248px !important;
-  /* width: 48% !important; */
 }
 .containerWidth289 {
   width: 289px !important;
@@ -500,8 +496,3 @@
     height: 24px;
   }
 }
-/* @media (max-width: 900px) {
-  .containerWidth {
-    width: 100% !important;
-  }
-} */

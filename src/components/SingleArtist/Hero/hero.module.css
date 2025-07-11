@@ -5,23 +5,19 @@
   background-repeat: no-repeat;
 }
 .info {
-  /* margin: 64px 0; */
   margin: 2em 0;
 }
 .name {
   font-weight: 700;
   text-transform: uppercase;
-  /* font-size: 96px; */
+
   margin-bottom: 12px;
   line-height: 114.6%;
   font-size: 5em;
-
-  direction: var(--dir);
-  unicode-bidi: bidi-override;
 }
 .direction {
   color: var(--Yellow);
-  /* font-size: 36px; */
+
   font-size: 1.875em;
   line-height: 133%;
   margin-bottom: 20px;

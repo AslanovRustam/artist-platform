@@ -45,7 +45,6 @@ function Footer() {
             >
               How it works
             </button>
-            {/* <a href={ANCHORS.howItWorks.anchor}>How it works</a> */}
           </li>
           <li className={styles.item}>
             <a href={ANCHORS.howItWorks.anchor}>Contact</a>

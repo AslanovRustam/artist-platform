@@ -4,7 +4,7 @@ import ButtonWithIcon from "../Button/ButtonWithIcon";
 import PopupArtistRegistration from "../Popups/PopupArtistRegistration";
 import CustomModal from "../CustomModal/CustomModal";
 import { MaskText } from "../AnimatedText/MaskText";
-// import Magnetic from "../Magnetic/Magnetic";
+
 // Styles
 import styles from "./missions.module.css";
 
@@ -43,9 +43,8 @@ function Missions() {
             We give artists visibility, clarity, and control.
           </MaskText>
         </div>
-        {/* <Magnetic> */}
+
         <ButtonWithIcon text="Get Started" onClick={togglePopup} />
-        {/* </Magnetic> */}
       </div>
       <div className={styles.decorLeft} />
       <div className={styles.decorRight} />

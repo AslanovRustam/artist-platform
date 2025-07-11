@@ -34,10 +34,7 @@
   color: var(--Grey-BG);
   text-align: center;
   text-transform: uppercase;
-  /* font-size: 80px;
-  line-height: 90px;
-  max-width: 1120px;
-  margin-bottom: 32px; */
+
   font-size: 4.166em;
   line-height: 112.5%;
   max-width: 58.33em;
@@ -71,7 +68,7 @@
   }
   .decorStar {
     bottom: -25%;
-    /* left: 23%; */
+
     right: unset;
     width: 56rem;
     height: 56rem;
