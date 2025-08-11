@@ -2,14 +2,18 @@ import { NavLink, useLocation, useNavigate } from "react-router";
 // Components
 import BouncingBallFooter from "../BouncingBall/BouncingBallFooter";
 import TriangleAnimation from "../TriangleAnimation/TriangleAnimation";
+import CustomModal from "../CustomModal/CustomModal";
+import PopupContacts from "../Popups/PopupContacts";
 //Images
 import AnimatedLogo from "../AnimatedLogo/AnimatedLogo";
 //Utils
 import { ANCHORS, ROUTES } from "../../utils/constants";
 //Styles
 import styles from "./footer.module.css";
+import { useState } from "react";
 
 function Footer() {
+  const [isPopupOpen, setIsPopupOpen] = useState<boolean>(false);
   const location = useLocation();
   const navigate = useNavigate();
 
@@ -26,6 +30,11 @@ function Footer() {
       navigate(`/${hash}`);
     }
   };
+
+  const togglePopup = () => {
+    setIsPopupOpen(!isPopupOpen);
+  };
+
   return (
     <footer className={styles.footer}>
       <NavLink to={ROUTES.home} className={styles.logoContainer}>
@@ -47,7 +56,7 @@ function Footer() {
             </button>
           </li>
           <li className={styles.item}>
-            <a href={ANCHORS.howItWorks.anchor}>Contact</a>
+            <button onClick={togglePopup}>Contact</button>
           </li>
         </ul>
       </nav>
@@ -65,6 +74,10 @@ function Footer() {
       <div className={styles.triangle}>
         <TriangleAnimation />
       </div>
+
+      <CustomModal open={isPopupOpen} onClose={togglePopup}>
+        <PopupContacts onClose={togglePopup} />
+      </CustomModal>
     </footer>
   );
 }

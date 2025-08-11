@@ -429,7 +429,34 @@
 .option {
   font-size: 14px;
 }
-
+.subTitleContact {
+  color: var(--Light-Grey);
+  font-family: Gotham-Book;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 125%;
+  margin-bottom: 16px;
+}
+.titleContainer {
+  width: 100%;
+  margin-bottom: 10px;
+}
+.titleForm {
+  color: var(--White);
+  font-family: Gotham;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 32px;
+  margin-bottom: 8px;
+}
+.subTitleContactForm {
+  color: var(--White);
+  font-family: Gotham-Book;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+  opacity: 0.8;
+}
 @media (orientation: portrait) {
   .container {
     height: 100% !important;

@@ -17,6 +17,7 @@ type Props = {
   classNameInput?: string;
   rows?: number;
   infoBtn?: boolean;
+  required?: boolean;
 };
 
 export default function Input({
@@ -32,6 +33,7 @@ export default function Input({
   classNameInput,
   rows = 2,
   infoBtn,
+  required = false,
 }: Props) {
   const { direction } = useDirection();
 
@@ -75,6 +77,7 @@ export default function Input({
             placeholder={placeholder}
             className={clsx(styles.input, classNameInput)}
             rows={rows}
+            required={required}
           />
         ) : (
           <input
@@ -85,6 +88,7 @@ export default function Input({
             placeholder={placeholder}
             className={clsx(styles.input, classNameInput)}
             type={type}
+            required={required}
           />
         )}
       </div>

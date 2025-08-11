@@ -460,3 +460,12 @@ export const ARTISTS_LIST = [
     variants: ["String Quartet", "Live Mix"],
   },
 ];
+
+export const SUBJECT = [
+  "Artist Registration",
+  "Venue Partnership",
+  "Technical Support",
+  "Business Partnership",
+  "Other",
+  "EDM",
+];
